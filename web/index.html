@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="気象庁の震源データを加工したb値分布の研究用ビューア">
+  <title>JMA b-value map</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">SEISMICITY RESEARCH VIEWER</p>
+      <h1>JMA b-value map</h1>
+      <p class="lead">日本周辺の地震規模別頻度分布とb値の空間分布</p>
+    </div>
+    <div class="status"><span></span><div>最終更新<time id="updated">確認中</time></div></div>
+  </header>
+
+  <main>
+    <section class="controls" aria-label="表示設定">
+      <label>表示期間<select id="dataset"><option>データを確認中…</option></select></label>
+      <div class="switch" role="group" aria-label="図の種類">
+        <button class="active" data-view="map">b値分布</button>
+        <button data-view="fmd">規模別頻度分布</button>
+      </div>
+    </section>
+
+    <section class="summary" aria-live="polite">
+      <div><span>期間</span><strong id="period">—</strong></div>
+      <div><span>格子幅</span><strong id="grid">—</strong></div>
+      <div><span>固定Mc</span><strong>2.5</strong></div>
+      <div><span>表示条件</span><strong>Mc≤2.5 / N≥100</strong></div>
+    </section>
+
+    <section class="figure-panel">
+      <div id="empty" class="empty" hidden>表示できる画像がまだありません。</div>
+      <img id="figure" alt="選択した期間のb値分布">
+    </section>
+
+    <section class="notes">
+      <h2>この図について</h2>
+      <p>b値は固定Mc=2.5を用いた最尤推定です。推定Mc≤2.5かつM≥2.5の地震が100個以上あるセルのみ表示し、条件外は灰色としています。カラースケールは全図共通で0.5〜1.4です。</p>
+      <p>出典：<a href="https://www.data.jma.go.jp/eqev/data/bulletin/hypo.html">気象庁「震源データ」</a>および<a href="https://www.data.jma.go.jp/eqev/data/daily_map/">気象庁「震源リスト」</a>をもとに加工して作成。</p>
+      <p class="caution">本サイトは研究目的の試作です。最新期間には後日変更される可能性のある暫定値が含まれます。地震・噴火の発生を予知または保証するものではなく、気象庁が作成・運営するサイトではありません。</p>
+    </section>
+  </main>
+  <footer>JMA b-value map · Research use only</footer>
+  <script src="app.js" defer></script>
+</body>
+</html>

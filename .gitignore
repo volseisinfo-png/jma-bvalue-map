@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Environments
+.env
+.venv/
+.conda/
+
+# Local raw catalogs
+data/raw/
+h19*
+h20*
+
+# Private path metadata
+run_metadata_*.json
+web/data/**/run_metadata_*.json
+
+# Temporary files
+work/
+*.tmp
+*.zip
+
