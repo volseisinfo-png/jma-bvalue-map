@@ -142,8 +142,8 @@ def iter_all_events(args: argparse.Namespace) -> Iterator[tuple[str, tuple[date,
         event = parse_hypocenter_record(raw)
         event_date = parse_hypocenter_date(raw)
         yield "fixed", ((event_date, *event) if event is not None and event_date is not None else None)
-    if args.provisional_file is not None:
-        for event in iter_provisional_events(args.provisional_file):
+    for path in args.provisional_files:
+        for event in iter_provisional_events(path):
             yield "provisional", event
 
 
@@ -236,17 +236,14 @@ def analyze(args: argparse.Namespace) -> dict[str, object]:
             "stats": stats}
 
 
-def latest_provisional_date(path: Path | None) -> date | None:
-    if path is None:
-        return None
+def latest_provisional_date(paths: Iterable[Path]) -> date | None:
     latest: date | None = None
-    with path.open("r", newline="", encoding="utf-8") as stream:
-        for row in csv.DictReader(stream):
-            try:
-                value = datetime.fromisoformat(row["datetime_jst"]).date()
-            except (KeyError, TypeError, ValueError):
-                continue
-            latest = value if latest is None or value > latest else latest
+    for path in paths:
+        with path.open("r", newline="", encoding="utf-8") as stream:
+            for row in csv.DictReader(stream):
+                try: value = datetime.fromisoformat(row["datetime_jst"]).date()
+                except (KeyError, TypeError, ValueError): continue
+                latest = value if latest is None or value > latest else latest
     return latest
 
 
@@ -503,6 +500,8 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--last-year", type=int, default=2023)
     p.add_argument("--provisional-file", type=Path, default=None,
                    help="CSV made by update_jma_provisional.py; defaults to INPUT_DIR/provisional_daily.csv if present")
+    p.add_argument("--provisional-files", type=Path, nargs="+", default=None,
+                   help="One or more yearly provisional CSV files")
     p.add_argument("--lat-min", type=float, default=20.0)
     p.add_argument("--lat-max", type=float, default=50.0)
     p.add_argument("--lon-min", type=float, default=120.0)
@@ -557,8 +556,8 @@ def write_result_bundle(args: argparse.Namespace, result: dict[str, object], suf
     metadata = vars(args).copy()
     metadata["input_dir"] = str(metadata["input_dir"])
     metadata["output_dir"] = str(metadata["output_dir"])
-    metadata["provisional_file"] = (str(metadata["provisional_file"])
-                                      if metadata["provisional_file"] else None)
+    metadata["provisional_file"] = str(metadata["provisional_file"]) if metadata["provisional_file"] else None
+    metadata["provisional_files"] = [str(path) for path in metadata["provisional_files"]]
     metadata["date_start"] = (metadata["date_start"].isoformat()
                                 if metadata["date_start"] else None)
     metadata["date_end"] = (metadata["date_end"].isoformat()
@@ -583,12 +582,20 @@ def main() -> int:
         raise SystemExit("--bin-width currently must be 0.1")
     if args.b_min is not None and args.b_max is not None and args.b_max <= args.b_min:
         raise SystemExit("--b-max must be greater than --b-min")
-    if args.provisional_file is None:
+    if args.provisional_file is not None and args.provisional_files is not None:
+        raise SystemExit("Use either --provisional-file or --provisional-files, not both")
+    if args.provisional_files is not None:
+        args.provisional_files=sorted(args.provisional_files)
+    elif args.provisional_file is None:
         candidate = args.input_dir / "provisional_daily.csv"
         if candidate.is_file():
-            args.provisional_file = candidate
+            args.provisional_files=[candidate]
+        else:
+            args.provisional_files=sorted(args.input_dir.glob("provisional_20??.csv"))
     elif not args.provisional_file.is_file():
         raise SystemExit(f"Provisional file not found: {args.provisional_file}")
+    else:
+        args.provisional_files=[args.provisional_file]
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
     if args.calendar_years is not None:
@@ -607,11 +614,11 @@ def main() -> int:
                 path for path in args.input_dir.glob(f"h{year}*") if path.is_file())
             if year <= args.last_year and not run_args.files:
                 raise SystemExit(f"Fixed catalog for {year} was not found in {args.input_dir}")
-            if year > args.last_year and run_args.provisional_file is None:
-                raise SystemExit(f"{year} requires provisional_daily.csv")
+            if year > args.last_year and not run_args.provisional_files:
+                raise SystemExit(f"{year} requires provisional CSV data")
             if year <= args.last_year:
                 # Avoid rescanning the 2024+ provisional file for every historical year.
-                run_args.provisional_file = None
+                run_args.provisional_files = []
             print(f"Calendar year {year}, grid {args.year_grid:g} deg")
             result = analyze(run_args)
             suffix = f"{year}_{grid_label(args.year_grid)}"
@@ -619,7 +626,7 @@ def main() -> int:
         return 0
 
     args.files = find_year_files(args.input_dir, args.first_year, args.last_year)
-    latest = latest_provisional_date(args.provisional_file) or date(args.last_year, 12, 31)
+    latest = latest_provisional_date(args.provisional_files) or date(args.last_year, 12, 31)
     periods = period_ranges(latest, list(dict.fromkeys(args.periods)))
     if args.grid is None:
         short_names = {"1month", "6months", "1year"}
@@ -667,8 +674,8 @@ def main() -> int:
             metadata = vars(run_args).copy()
             metadata["input_dir"] = str(metadata["input_dir"])
             metadata["output_dir"] = str(metadata["output_dir"])
-            metadata["provisional_file"] = (str(metadata["provisional_file"])
-                                              if metadata["provisional_file"] else None)
+            metadata["provisional_file"] = str(metadata["provisional_file"]) if metadata["provisional_file"] else None
+            metadata["provisional_files"] = [str(path) for path in metadata["provisional_files"]]
             metadata["date_start"] = (metadata["date_start"].isoformat()
                                         if metadata["date_start"] else None)
             metadata["date_end"] = (metadata["date_end"].isoformat()

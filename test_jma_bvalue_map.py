@@ -1,7 +1,11 @@
 import unittest
+import csv
+import tempfile
 from datetime import date
+from pathlib import Path
 
 from jma_bvalue_map import (decode_jma_magnitude, grid_label,
+                            iter_provisional_events, latest_provisional_date,
                             parse_hypocenter_date, parse_hypocenter_record,
                             period_ranges)
 from update_jma_provisional import available_days, parse_daily_html
@@ -58,6 +62,17 @@ class JmaParserTest(unittest.TestCase):
         self.assertEqual(ranges[0], ("1month", date(2026, 8, 4), date(2026, 9, 3)))
         self.assertEqual(ranges[2], ("1year", date(2025, 9, 4), date(2026, 9, 3)))
         self.assertEqual(ranges[-1], ("all", None, None))
+
+    def test_multiple_yearly_provisional_files(self):
+        with tempfile.TemporaryDirectory() as directory:
+            paths=[]
+            for year in (2024,2025):
+                path=Path(directory)/f"provisional_{year}.csv"; paths.append(path)
+                with path.open("w",encoding="utf-8",newline="") as stream:
+                    writer=csv.DictWriter(stream,fieldnames=["datetime_jst","latitude","longitude","magnitude"])
+                    writer.writeheader(); writer.writerow({"datetime_jst":f"{year}-12-31T12:00:00","latitude":"35","longitude":"140","magnitude":"2.5"})
+            self.assertEqual(latest_provisional_date(paths),date(2025,12,31))
+            self.assertEqual(sum(len(list(iter_provisional_events(path))) for path in paths),2)
 
 
 if __name__ == "__main__":

@@ -19,9 +19,9 @@ h20*
 # Private path metadata
 run_metadata_*.json
 web/data/**/run_metadata_*.json
+web/data/**/*.csv
 
 # Temporary files
 work/
 *.tmp
 *.zip
-
