@@ -1,0 +1,3103 @@
+{
+  "generated_at": "2026-09-09T23:20:36.236857+09:00",
+  "period_start": "2024-01-01T00:00:00+09:00",
+  "period_end": "2026-09-07T23:56:34.600000+09:00",
+  "definitions": {
+    "hit": "対象本震がアラーム地震に対応するいずれかのセル内で警報期間中に発生",
+    "miss": "対象本震に対応する事前判定なし",
+    "false_alarm": "警報時空間内に対象本震が続かなかったアラーム地震",
+    "alarm_earthquake": "各系列で条件を満たすに至ったNf個目の地震（重複格子でも同じ地震は1件）",
+    "alarm_rate": "予測された対象本震数 / 全対象本震数",
+    "truth_rate": "適中したアラーム地震数 / 全アラーム地震数"
+  },
+  "counts": {
+    "hits": 3,
+    "misses": 43,
+    "targets": 46,
+    "successful_alarm_earthquakes": 4,
+    "false_alarm_earthquakes": 28,
+    "alarm_earthquakes": 32,
+    "alarms_raw_cells": 74,
+    "small_aftershocks_removed": 32871,
+    "target_aftershocks_removed": 202
+  },
+  "rates": {
+    "alarm_rate": 0.06521739130434782,
+    "truth_rate": 0.125
+  },
+  "hits": [
+    {
+      "target": {
+        "datetime_jst": "2026-03-02T19:39:21.800000+09:00",
+        "latitude": 25.355,
+        "longitude": 124.893333,
+        "depth_km": 5.0,
+        "magnitude": 6.2,
+        "region": "宮古島北西沖"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": [
+        {
+          "profile_id": "national",
+          "profile_label": "その他の全国域",
+          "source": "Maeda (1996)",
+          "parameters": {
+            "D_degrees": 0.5,
+            "Mf_min": 5.0,
+            "Tf_days": 10.0,
+            "Nf": 3,
+            "Ta_days": 5.0,
+            "target_M_min": 6.0
+          },
+          "center": null,
+          "bounds": {
+            "south": 25.0,
+            "north": 25.75,
+            "west": 124.5,
+            "east": 125.25
+          },
+          "triggered_at": "2026-02-27T11:54:51.600000+09:00",
+          "expires_at": "2026-03-04T11:54:51.600000+09:00",
+          "cell_bounds": [
+            {
+              "south": 25.25,
+              "north": 25.75,
+              "west": 124.5,
+              "east": 125.0
+            },
+            {
+              "south": 25.25,
+              "north": 25.75,
+              "west": 124.75,
+              "east": 125.25
+            },
+            {
+              "south": 25.0,
+              "north": 25.5,
+              "west": 124.5,
+              "east": 125.0
+            },
+            {
+              "south": 25.0,
+              "north": 25.5,
+              "west": 124.75,
+              "east": 125.25
+            }
+          ],
+          "cell_centers": [
+            {
+              "latitude": 25.5,
+              "longitude": 124.75
+            },
+            {
+              "latitude": 25.5,
+              "longitude": 125.0
+            },
+            {
+              "latitude": 25.25,
+              "longitude": 124.75
+            },
+            {
+              "latitude": 25.25,
+              "longitude": 125.0
+            }
+          ],
+          "raw_cell_count": 4,
+          "foreshocks": [
+            {
+              "datetime_jst": "2026-02-27T03:51:49.600000+09:00",
+              "latitude": 25.336667,
+              "longitude": 124.883333,
+              "depth_km": 8.0,
+              "magnitude": 5.1,
+              "region": "宮古島近海"
+            },
+            {
+              "datetime_jst": "2026-02-27T08:06:30.300000+09:00",
+              "latitude": 25.318333,
+              "longitude": 124.878333,
+              "depth_km": 5.0,
+              "magnitude": 5.0,
+              "region": "宮古島近海"
+            },
+            {
+              "datetime_jst": "2026-02-27T11:54:51.600000+09:00",
+              "latitude": 25.373333,
+              "longitude": 124.94,
+              "depth_km": 9.0,
+              "magnitude": 5.4,
+              "region": "宮古島近海"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": {
+        "datetime_jst": "2025-11-09T17:03:39.200000+09:00",
+        "latitude": 39.401667,
+        "longitude": 143.506667,
+        "depth_km": 16.0,
+        "magnitude": 6.9,
+        "region": "三陸沖"
+      },
+      "profile_id": "off_iwate",
+      "profile_label": "岩手県沖",
+      "matching_alarms": [
+        {
+          "profile_id": "off_iwate",
+          "profile_label": "岩手県沖",
+          "source": "Hirose et al. (2021)",
+          "parameters": {
+            "D_degrees": 0.5,
+            "Mf_min": 5.0,
+            "Tf_days": 9.0,
+            "Nf": 3,
+            "Ta_days": 4.0,
+            "target_M_min": 6.0
+          },
+          "center": null,
+          "bounds": {
+            "south": 39.0,
+            "north": 39.75,
+            "west": 143.25,
+            "east": 143.75
+          },
+          "triggered_at": "2025-11-09T06:04:18.600000+09:00",
+          "expires_at": "2025-11-13T06:04:18.600000+09:00",
+          "cell_bounds": [
+            {
+              "south": 39.25,
+              "north": 39.75,
+              "west": 143.25,
+              "east": 143.75
+            },
+            {
+              "south": 39.0,
+              "north": 39.5,
+              "west": 143.25,
+              "east": 143.75
+            }
+          ],
+          "cell_centers": [
+            {
+              "latitude": 39.5,
+              "longitude": 143.5
+            },
+            {
+              "latitude": 39.25,
+              "longitude": 143.5
+            }
+          ],
+          "raw_cell_count": 2,
+          "foreshocks": [
+            {
+              "datetime_jst": "2025-11-04T04:16:06.600000+09:00",
+              "latitude": 39.353333,
+              "longitude": 143.553333,
+              "depth_km": 12.0,
+              "magnitude": 5.3,
+              "region": "三陸沖"
+            },
+            {
+              "datetime_jst": "2025-11-09T05:29:16.200000+09:00",
+              "latitude": 39.43,
+              "longitude": 143.501667,
+              "depth_km": 15.0,
+              "magnitude": 5.4,
+              "region": "三陸沖"
+            },
+            {
+              "datetime_jst": "2025-11-09T06:04:18.600000+09:00",
+              "latitude": 39.368333,
+              "longitude": 143.42,
+              "depth_km": 13.0,
+              "magnitude": 5.5,
+              "region": "三陸沖"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": {
+        "datetime_jst": "2024-11-07T07:54:58.800000+09:00",
+        "latitude": 25.526667,
+        "longitude": 143.496667,
+        "depth_km": 0.0,
+        "magnitude": 6.3,
+        "region": "硫黄島近海"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": [
+        {
+          "profile_id": "national",
+          "profile_label": "その他の全国域",
+          "source": "Maeda (1996)",
+          "parameters": {
+            "D_degrees": 0.5,
+            "Mf_min": 5.0,
+            "Tf_days": 10.0,
+            "Nf": 3,
+            "Ta_days": 5.0,
+            "target_M_min": 6.0
+          },
+          "center": null,
+          "bounds": {
+            "south": 25.25,
+            "north": 25.75,
+            "west": 143.0,
+            "east": 143.5
+          },
+          "triggered_at": "2024-11-03T21:06:43+09:00",
+          "expires_at": "2024-11-08T21:06:43+09:00",
+          "cell_bounds": [
+            {
+              "south": 25.25,
+              "north": 25.75,
+              "west": 143.0,
+              "east": 143.5
+            }
+          ],
+          "cell_centers": [
+            {
+              "latitude": 25.5,
+              "longitude": 143.25
+            }
+          ],
+          "raw_cell_count": 1,
+          "foreshocks": [
+            {
+              "datetime_jst": "2024-10-25T02:51:23.900000+09:00",
+              "latitude": 25.65,
+              "longitude": 143.126667,
+              "depth_km": 0.0,
+              "magnitude": 5.4,
+              "region": "硫黄島近海"
+            },
+            {
+              "datetime_jst": "2024-11-03T04:28:56.800000+09:00",
+              "latitude": 25.486667,
+              "longitude": 143.268333,
+              "depth_km": 6.0,
+              "magnitude": 5.0,
+              "region": "硫黄島近海"
+            },
+            {
+              "datetime_jst": "2024-11-03T21:06:43+09:00",
+              "latitude": 25.51,
+              "longitude": 143.308333,
+              "depth_km": 0.0,
+              "magnitude": 5.0,
+              "region": "硫黄島近海"
+            }
+          ]
+        },
+        {
+          "profile_id": "national",
+          "profile_label": "その他の全国域",
+          "source": "Maeda (1996)",
+          "parameters": {
+            "D_degrees": 0.5,
+            "Mf_min": 5.0,
+            "Tf_days": 10.0,
+            "Nf": 3,
+            "Ta_days": 5.0,
+            "target_M_min": 6.0
+          },
+          "center": null,
+          "bounds": {
+            "south": 25.25,
+            "north": 25.75,
+            "west": 143.25,
+            "east": 143.75
+          },
+          "triggered_at": "2024-11-03T21:09:48.700000+09:00",
+          "expires_at": "2024-11-08T21:09:48.700000+09:00",
+          "cell_bounds": [
+            {
+              "south": 25.25,
+              "north": 25.75,
+              "west": 143.25,
+              "east": 143.75
+            }
+          ],
+          "cell_centers": [
+            {
+              "latitude": 25.5,
+              "longitude": 143.5
+            }
+          ],
+          "raw_cell_count": 1,
+          "foreshocks": [
+            {
+              "datetime_jst": "2024-11-03T04:28:56.800000+09:00",
+              "latitude": 25.486667,
+              "longitude": 143.268333,
+              "depth_km": 6.0,
+              "magnitude": 5.0,
+              "region": "硫黄島近海"
+            },
+            {
+              "datetime_jst": "2024-11-03T21:06:43+09:00",
+              "latitude": 25.51,
+              "longitude": 143.308333,
+              "depth_km": 0.0,
+              "magnitude": 5.0,
+              "region": "硫黄島近海"
+            },
+            {
+              "datetime_jst": "2024-11-03T21:09:48.700000+09:00",
+              "latitude": 25.448333,
+              "longitude": 143.326667,
+              "depth_km": 9.0,
+              "magnitude": 5.2,
+              "region": "硫黄島近海"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "misses": [
+    {
+      "target": {
+        "datetime_jst": "2026-08-23T22:44:54.100000+09:00",
+        "latitude": 41.781667,
+        "longitude": 142.873333,
+        "depth_km": 41.0,
+        "magnitude": 6.0,
+        "region": "浦河沖"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2026-07-28T16:27:15.200000+09:00",
+        "latitude": 32.625,
+        "longitude": 130.678333,
+        "depth_km": 16.0,
+        "magnitude": 7.1,
+        "region": "熊本県熊本地方"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2026-07-03T13:04:44.600000+09:00",
+        "latitude": 26.155,
+        "longitude": 125.7,
+        "depth_km": 1.0,
+        "magnitude": 6.5,
+        "region": "宮古島北西沖"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2026-06-01T12:34:32.100000+09:00",
+        "latitude": 30.718333,
+        "longitude": 141.965,
+        "depth_km": 65.0,
+        "magnitude": 6.0,
+        "region": "鳥島近海"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2026-05-15T20:22:02+09:00",
+        "latitude": 38.903333,
+        "longitude": 142.096667,
+        "depth_km": 46.0,
+        "magnitude": 6.4,
+        "region": "宮城県沖"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2026-04-27T05:23:56.400000+09:00",
+        "latitude": 42.67,
+        "longitude": 143.075,
+        "depth_km": 83.0,
+        "magnitude": 6.2,
+        "region": "十勝地方南部"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2026-04-20T16:52:58+09:00",
+        "latitude": 39.841667,
+        "longitude": 143.156667,
+        "depth_km": 19.0,
+        "magnitude": 7.7,
+        "region": "三陸沖"
+      },
+      "profile_id": "off_iwate",
+      "profile_label": "岩手県沖",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2026-04-18T14:54:30.600000+09:00",
+        "latitude": 36.571667,
+        "longitude": 137.855,
+        "depth_km": 9.0,
+        "magnitude": 5.1,
+        "region": "長野県北部"
+      },
+      "profile_id": "central_honshu",
+      "profile_label": "中部日本",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2026-04-18T13:20:05.400000+09:00",
+        "latitude": 36.58,
+        "longitude": 137.85,
+        "depth_km": 8.0,
+        "magnitude": 5.0,
+        "region": "長野県北部"
+      },
+      "profile_id": "central_honshu",
+      "profile_label": "中部日本",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2026-03-26T23:18:52.900000+09:00",
+        "latitude": 39.443333,
+        "longitude": 143.301667,
+        "depth_km": 15.0,
+        "magnitude": 6.7,
+        "region": "三陸沖"
+      },
+      "profile_id": "off_iwate",
+      "profile_label": "岩手県沖",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2026-03-08T22:17:08.900000+09:00",
+        "latitude": 39.405,
+        "longitude": 143.226667,
+        "depth_km": 17.0,
+        "magnitude": 6.1,
+        "region": "三陸沖"
+      },
+      "profile_id": "off_iwate",
+      "profile_label": "岩手県沖",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2026-03-02T12:55:25.600000+09:00",
+        "latitude": 23.253333,
+        "longitude": 144.466667,
+        "depth_km": 74.0,
+        "magnitude": 6.2,
+        "region": "硫黄島近海"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2026-01-22T01:37:37.400000+09:00",
+        "latitude": 22.885,
+        "longitude": 143.021667,
+        "depth_km": 0.0,
+        "magnitude": 6.5,
+        "region": "硫黄島近海"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2026-01-15T14:48:03+09:00",
+        "latitude": 36.365,
+        "longitude": 137.621667,
+        "depth_km": 0.0,
+        "magnitude": 5.2,
+        "region": "岐阜県飛騨地方"
+      },
+      "profile_id": "central_honshu",
+      "profile_label": "中部日本",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2026-01-13T16:34:10.500000+09:00",
+        "latitude": 44.371667,
+        "longitude": 148.936667,
+        "depth_km": 30.0,
+        "magnitude": 6.3,
+        "region": "択捉島南東沖"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2026-01-06T10:18:48.400000+09:00",
+        "latitude": 35.315,
+        "longitude": 133.213333,
+        "depth_km": 11.0,
+        "magnitude": 6.4,
+        "region": "島根県東部"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2025-12-31T23:26:58.400000+09:00",
+        "latitude": 40.066667,
+        "longitude": 142.885,
+        "depth_km": 32.0,
+        "magnitude": 6.1,
+        "region": "岩手県沖"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2025-12-28T00:05:54.600000+09:00",
+        "latitude": 24.631667,
+        "longitude": 121.97,
+        "depth_km": 86.0,
+        "magnitude": 7.0,
+        "region": "台湾付近"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2025-12-08T23:15:10.100000+09:00",
+        "latitude": 40.966667,
+        "longitude": 142.286667,
+        "depth_km": 54.0,
+        "magnitude": 7.5,
+        "region": "青森県東方沖"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2025-10-05T00:21:08.500000+09:00",
+        "latitude": 37.418333,
+        "longitude": 141.585,
+        "depth_km": 45.0,
+        "magnitude": 6.0,
+        "region": "福島県沖"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2025-06-22T06:23:19.800000+09:00",
+        "latitude": 42.89,
+        "longitude": 146.491667,
+        "depth_km": 24.0,
+        "magnitude": 6.0,
+        "region": "根室半島南東沖"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2025-06-19T08:08:07.400000+09:00",
+        "latitude": 42.911667,
+        "longitude": 146.511667,
+        "depth_km": 25.0,
+        "magnitude": 6.0,
+        "region": "根室半島南東沖"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2025-06-11T20:00:28.100000+09:00",
+        "latitude": 23.376667,
+        "longitude": 121.586667,
+        "depth_km": 38.0,
+        "magnitude": 6.0,
+        "region": "台湾付近"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2025-06-02T03:51:54.300000+09:00",
+        "latitude": 41.715,
+        "longitude": 143.718333,
+        "depth_km": 27.0,
+        "magnitude": 6.1,
+        "region": "十勝沖"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2025-05-31T17:37:18.900000+09:00",
+        "latitude": 42.326667,
+        "longitude": 144.451667,
+        "depth_km": 20.0,
+        "magnitude": 6.0,
+        "region": "釧路沖"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2025-05-05T19:53:26.400000+09:00",
+        "latitude": 23.878333,
+        "longitude": 121.956667,
+        "depth_km": 14.0,
+        "magnitude": 6.0,
+        "region": "台湾付近"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2025-04-18T20:19:28.600000+09:00",
+        "latitude": 36.468333,
+        "longitude": 137.913333,
+        "depth_km": 13.0,
+        "magnitude": 5.1,
+        "region": "長野県北部"
+      },
+      "profile_id": "central_honshu",
+      "profile_label": "中部日本",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2025-04-02T23:03:58.800000+09:00",
+        "latitude": 31.045,
+        "longitude": 131.521667,
+        "depth_km": 36.0,
+        "magnitude": 6.1,
+        "region": "大隅半島東方沖"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2025-01-21T01:17:26.600000+09:00",
+        "latitude": 23.275,
+        "longitude": 120.498333,
+        "depth_km": 8.0,
+        "magnitude": 6.1,
+        "region": "台湾付近"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2025-01-13T21:19:32.800000+09:00",
+        "latitude": 31.828333,
+        "longitude": 131.57,
+        "depth_km": 36.0,
+        "magnitude": 6.6,
+        "region": "日向灘"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2024-12-27T06:02:25.200000+09:00",
+        "latitude": 30.586667,
+        "longitude": 142.348333,
+        "depth_km": 67.0,
+        "magnitude": 6.2,
+        "region": "鳥島近海"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2024-11-26T22:47:02.800000+09:00",
+        "latitude": 37.008333,
+        "longitude": 136.396667,
+        "depth_km": 7.0,
+        "magnitude": 6.6,
+        "region": "石川県西方沖"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2024-11-11T19:16:54.100000+09:00",
+        "latitude": 20.521667,
+        "longitude": 145.985,
+        "depth_km": 0.0,
+        "magnitude": 6.0,
+        "region": "マリアナ諸島"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2024-08-10T12:28:31.600000+09:00",
+        "latitude": 46.796667,
+        "longitude": 145.005,
+        "depth_km": 447.0,
+        "magnitude": 6.7,
+        "region": "オホーツク海南部"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2024-08-08T16:42:55.500000+09:00",
+        "latitude": 31.736667,
+        "longitude": 131.721667,
+        "depth_km": 31.0,
+        "magnitude": 7.1,
+        "region": "日向灘"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2024-07-08T05:01:13.200000+09:00",
+        "latitude": 27.04,
+        "longitude": 139.28,
+        "depth_km": 598.0,
+        "magnitude": 6.4,
+        "region": "小笠原諸島西方沖"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2024-04-27T17:35:34.800000+09:00",
+        "latitude": 27.903333,
+        "longitude": 139.798333,
+        "depth_km": 515.0,
+        "magnitude": 6.7,
+        "region": "小笠原諸島西方沖"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2024-04-17T23:14:48.700000+09:00",
+        "latitude": 33.2,
+        "longitude": 132.408333,
+        "depth_km": 39.0,
+        "magnitude": 6.6,
+        "region": "豊後水道"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2024-04-04T12:16:30.200000+09:00",
+        "latitude": 37.73,
+        "longitude": 141.861667,
+        "depth_km": 44.0,
+        "magnitude": 6.3,
+        "region": "福島県沖"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2024-04-03T08:58:09.400000+09:00",
+        "latitude": 23.831667,
+        "longitude": 121.598333,
+        "depth_km": 23.0,
+        "magnitude": 7.7,
+        "region": "台湾付近"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2024-04-02T04:24:39+09:00",
+        "latitude": 40.133333,
+        "longitude": 141.711667,
+        "depth_km": 71.0,
+        "magnitude": 6.0,
+        "region": "岩手県沿岸北部"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2024-02-12T20:19:40.400000+09:00",
+        "latitude": 22.405,
+        "longitude": 142.598333,
+        "depth_km": 267.0,
+        "magnitude": 6.5,
+        "region": "硫黄島近海"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
+    {
+      "target": {
+        "datetime_jst": "2024-01-01T16:10:22.500000+09:00",
+        "latitude": 37.495,
+        "longitude": 137.27,
+        "depth_km": 16.0,
+        "magnitude": 7.6,
+        "region": "石川県能登地方"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    }
+  ],
+  "false_alarms": [
+    {
+      "profile_id": "central_honshu",
+      "profile_label": "中部日本",
+      "source": "Hirose et al. (2021)",
+      "parameters": {
+        "D_degrees": 0.2,
+        "Mf_min": 2.0,
+        "Tf_days": 1.0,
+        "Nf": 5,
+        "Ta_days": 5.0,
+        "target_M_min": 5.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 36.199999999999996,
+        "north": 36.5,
+        "west": 137.8,
+        "east": 138.1
+      },
+      "triggered_at": "2026-07-22T07:30:32.900000+09:00",
+      "expires_at": "2026-07-27T07:30:32.900000+09:00",
+      "cell_bounds": [
+        {
+          "south": 36.3,
+          "north": 36.5,
+          "west": 137.8,
+          "east": 138.0
+        },
+        {
+          "south": 36.3,
+          "north": 36.5,
+          "west": 137.9,
+          "east": 138.1
+        },
+        {
+          "south": 36.199999999999996,
+          "north": 36.4,
+          "west": 137.9,
+          "east": 138.1
+        },
+        {
+          "south": 36.199999999999996,
+          "north": 36.4,
+          "west": 137.8,
+          "east": 138.0
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 36.4,
+          "longitude": 137.9
+        },
+        {
+          "latitude": 36.4,
+          "longitude": 138.0
+        },
+        {
+          "latitude": 36.3,
+          "longitude": 138.0
+        },
+        {
+          "latitude": 36.3,
+          "longitude": 137.9
+        }
+      ],
+      "raw_cell_count": 4,
+      "foreshocks": [
+        {
+          "datetime_jst": "2026-07-21T22:54:46.400000+09:00",
+          "latitude": 36.353333,
+          "longitude": 137.981667,
+          "depth_km": 10.0,
+          "magnitude": 2.1,
+          "region": "長野県中部"
+        },
+        {
+          "datetime_jst": "2026-07-22T02:57:11.100000+09:00",
+          "latitude": 36.355,
+          "longitude": 137.981667,
+          "depth_km": 10.0,
+          "magnitude": 2.4,
+          "region": "長野県中部"
+        },
+        {
+          "datetime_jst": "2026-07-22T05:45:31.300000+09:00",
+          "latitude": 36.353333,
+          "longitude": 137.981667,
+          "depth_km": 10.0,
+          "magnitude": 2.9,
+          "region": "長野県中部"
+        },
+        {
+          "datetime_jst": "2026-07-22T05:45:55.700000+09:00",
+          "latitude": 36.353333,
+          "longitude": 137.978333,
+          "depth_km": 11.0,
+          "magnitude": 3.2,
+          "region": "長野県中部"
+        },
+        {
+          "datetime_jst": "2026-07-22T07:30:32.900000+09:00",
+          "latitude": 36.355,
+          "longitude": 137.975,
+          "depth_km": 10.0,
+          "magnitude": 3.0,
+          "region": "長野県中部"
+        }
+      ]
+    },
+    {
+      "profile_id": "off_iwate",
+      "profile_label": "岩手県沖",
+      "source": "Hirose et al. (2021)",
+      "parameters": {
+        "D_degrees": 0.5,
+        "Mf_min": 5.0,
+        "Tf_days": 9.0,
+        "Nf": 3,
+        "Ta_days": 4.0,
+        "target_M_min": 6.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 39.0,
+        "north": 39.75,
+        "west": 143.0,
+        "east": 143.5
+      },
+      "triggered_at": "2026-03-14T04:55:22.600000+09:00",
+      "expires_at": "2026-03-18T04:55:22.600000+09:00",
+      "cell_bounds": [
+        {
+          "south": 39.0,
+          "north": 39.5,
+          "west": 143.0,
+          "east": 143.5
+        },
+        {
+          "south": 39.25,
+          "north": 39.75,
+          "west": 143.0,
+          "east": 143.5
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 39.25,
+          "longitude": 143.25
+        },
+        {
+          "latitude": 39.5,
+          "longitude": 143.25
+        }
+      ],
+      "raw_cell_count": 2,
+      "foreshocks": [
+        {
+          "datetime_jst": "2026-03-08T22:08:37.500000+09:00",
+          "latitude": 39.378333,
+          "longitude": 143.228333,
+          "depth_km": 14.0,
+          "magnitude": 5.6,
+          "region": "三陸沖"
+        },
+        {
+          "datetime_jst": "2026-03-08T22:17:08.900000+09:00",
+          "latitude": 39.405,
+          "longitude": 143.226667,
+          "depth_km": 17.0,
+          "magnitude": 6.1,
+          "region": "三陸沖"
+        },
+        {
+          "datetime_jst": "2026-03-14T04:55:22.600000+09:00",
+          "latitude": 39.365,
+          "longitude": 143.386667,
+          "depth_km": 14.0,
+          "magnitude": 5.2,
+          "region": "三陸沖"
+        }
+      ]
+    },
+    {
+      "profile_id": "central_honshu",
+      "profile_label": "中部日本",
+      "source": "Hirose et al. (2021)",
+      "parameters": {
+        "D_degrees": 0.2,
+        "Mf_min": 2.0,
+        "Tf_days": 1.0,
+        "Nf": 5,
+        "Ta_days": 5.0,
+        "target_M_min": 5.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 35.699999999999996,
+        "north": 36.0,
+        "west": 137.5,
+        "east": 137.79999999999998
+      },
+      "triggered_at": "2026-03-02T23:34:56.500000+09:00",
+      "expires_at": "2026-03-07T23:34:56.500000+09:00",
+      "cell_bounds": [
+        {
+          "south": 35.8,
+          "north": 36.0,
+          "west": 137.5,
+          "east": 137.7
+        },
+        {
+          "south": 35.699999999999996,
+          "north": 35.9,
+          "west": 137.5,
+          "east": 137.7
+        },
+        {
+          "south": 35.699999999999996,
+          "north": 35.9,
+          "west": 137.6,
+          "east": 137.79999999999998
+        },
+        {
+          "south": 35.8,
+          "north": 36.0,
+          "west": 137.6,
+          "east": 137.79999999999998
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 35.9,
+          "longitude": 137.6
+        },
+        {
+          "latitude": 35.8,
+          "longitude": 137.6
+        },
+        {
+          "latitude": 35.8,
+          "longitude": 137.7
+        },
+        {
+          "latitude": 35.9,
+          "longitude": 137.7
+        }
+      ],
+      "raw_cell_count": 4,
+      "foreshocks": [
+        {
+          "datetime_jst": "2026-03-02T19:13:18.800000+09:00",
+          "latitude": 35.9,
+          "longitude": 137.645,
+          "depth_km": 6.0,
+          "magnitude": 3.0,
+          "region": "長野県南部"
+        },
+        {
+          "datetime_jst": "2026-03-02T19:29:26+09:00",
+          "latitude": 35.898333,
+          "longitude": 137.645,
+          "depth_km": 6.0,
+          "magnitude": 3.1,
+          "region": "長野県南部"
+        },
+        {
+          "datetime_jst": "2026-03-02T19:30:25+09:00",
+          "latitude": 35.896667,
+          "longitude": 137.646667,
+          "depth_km": 6.0,
+          "magnitude": 2.5,
+          "region": "長野県南部"
+        },
+        {
+          "datetime_jst": "2026-03-02T21:17:03.200000+09:00",
+          "latitude": 35.9,
+          "longitude": 137.646667,
+          "depth_km": 6.0,
+          "magnitude": 2.4,
+          "region": "長野県南部"
+        },
+        {
+          "datetime_jst": "2026-03-02T23:34:56.500000+09:00",
+          "latitude": 35.9,
+          "longitude": 137.645,
+          "depth_km": 6.0,
+          "magnitude": 2.2,
+          "region": "長野県南部"
+        }
+      ]
+    },
+    {
+      "profile_id": "izu_islands",
+      "profile_label": "伊豆諸島",
+      "source": "Hirose et al. (2021)",
+      "parameters": {
+        "D_degrees": 0.2,
+        "Mf_min": 3.0,
+        "Tf_days": 1.0,
+        "Nf": 2,
+        "Ta_days": 4.0,
+        "target_M_min": 5.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 34.0,
+        "north": 34.300000000000004,
+        "west": 139.1,
+        "east": 139.4
+      },
+      "triggered_at": "2025-12-11T03:55:25.700000+09:00",
+      "expires_at": "2025-12-15T03:55:25.700000+09:00",
+      "cell_bounds": [
+        {
+          "south": 34.0,
+          "north": 34.2,
+          "west": 139.1,
+          "east": 139.29999999999998
+        },
+        {
+          "south": 34.0,
+          "north": 34.2,
+          "west": 139.20000000000002,
+          "east": 139.4
+        },
+        {
+          "south": 34.1,
+          "north": 34.300000000000004,
+          "west": 139.1,
+          "east": 139.29999999999998
+        },
+        {
+          "south": 34.1,
+          "north": 34.300000000000004,
+          "west": 139.20000000000002,
+          "east": 139.4
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 34.1,
+          "longitude": 139.2
+        },
+        {
+          "latitude": 34.1,
+          "longitude": 139.3
+        },
+        {
+          "latitude": 34.2,
+          "longitude": 139.2
+        },
+        {
+          "latitude": 34.2,
+          "longitude": 139.3
+        }
+      ],
+      "raw_cell_count": 4,
+      "foreshocks": [
+        {
+          "datetime_jst": "2025-12-11T03:26:24.100000+09:00",
+          "latitude": 34.193333,
+          "longitude": 139.291667,
+          "depth_km": 13.0,
+          "magnitude": 3.0,
+          "region": "新島・神津島近海"
+        },
+        {
+          "datetime_jst": "2025-12-11T03:55:25.700000+09:00",
+          "latitude": 34.196667,
+          "longitude": 139.291667,
+          "depth_km": 13.0,
+          "magnitude": 3.8,
+          "region": "新島・神津島近海"
+        }
+      ]
+    },
+    {
+      "profile_id": "off_iwate",
+      "profile_label": "岩手県沖",
+      "source": "Hirose et al. (2021)",
+      "parameters": {
+        "D_degrees": 0.5,
+        "Mf_min": 5.0,
+        "Tf_days": 9.0,
+        "Nf": 3,
+        "Ta_days": 4.0,
+        "target_M_min": 6.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 39.0,
+        "north": 39.75,
+        "west": 143.5,
+        "east": 144.0
+      },
+      "triggered_at": "2025-11-09T17:03:39.200000+09:00",
+      "expires_at": "2025-11-13T17:03:39.200000+09:00",
+      "cell_bounds": [
+        {
+          "south": 39.25,
+          "north": 39.75,
+          "west": 143.5,
+          "east": 144.0
+        },
+        {
+          "south": 39.0,
+          "north": 39.5,
+          "west": 143.5,
+          "east": 144.0
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 39.5,
+          "longitude": 143.75
+        },
+        {
+          "latitude": 39.25,
+          "longitude": 143.75
+        }
+      ],
+      "raw_cell_count": 2,
+      "foreshocks": [
+        {
+          "datetime_jst": "2025-11-04T04:16:06.600000+09:00",
+          "latitude": 39.353333,
+          "longitude": 143.553333,
+          "depth_km": 12.0,
+          "magnitude": 5.3,
+          "region": "三陸沖"
+        },
+        {
+          "datetime_jst": "2025-11-09T05:29:16.200000+09:00",
+          "latitude": 39.43,
+          "longitude": 143.501667,
+          "depth_km": 15.0,
+          "magnitude": 5.4,
+          "region": "三陸沖"
+        },
+        {
+          "datetime_jst": "2025-11-09T17:03:39.200000+09:00",
+          "latitude": 39.401667,
+          "longitude": 143.506667,
+          "depth_km": 16.0,
+          "magnitude": 6.9,
+          "region": "三陸沖"
+        }
+      ]
+    },
+    {
+      "profile_id": "off_iwate",
+      "profile_label": "岩手県沖",
+      "source": "Hirose et al. (2021)",
+      "parameters": {
+        "D_degrees": 0.5,
+        "Mf_min": 5.0,
+        "Tf_days": 9.0,
+        "Nf": 3,
+        "Ta_days": 4.0,
+        "target_M_min": 6.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 39.0,
+        "north": 39.75,
+        "west": 143.0,
+        "east": 143.5
+      },
+      "triggered_at": "2025-11-09T07:27:00.600000+09:00",
+      "expires_at": "2025-11-13T07:27:00.600000+09:00",
+      "cell_bounds": [
+        {
+          "south": 39.0,
+          "north": 39.5,
+          "west": 143.0,
+          "east": 143.5
+        },
+        {
+          "south": 39.25,
+          "north": 39.75,
+          "west": 143.0,
+          "east": 143.5
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 39.25,
+          "longitude": 143.25
+        },
+        {
+          "latitude": 39.5,
+          "longitude": 143.25
+        }
+      ],
+      "raw_cell_count": 2,
+      "foreshocks": [
+        {
+          "datetime_jst": "2025-11-09T06:04:18.600000+09:00",
+          "latitude": 39.368333,
+          "longitude": 143.42,
+          "depth_km": 13.0,
+          "magnitude": 5.5,
+          "region": "三陸沖"
+        },
+        {
+          "datetime_jst": "2025-11-09T07:15:08.800000+09:00",
+          "latitude": 39.433333,
+          "longitude": 143.47,
+          "depth_km": 13.0,
+          "magnitude": 5.9,
+          "region": "三陸沖"
+        },
+        {
+          "datetime_jst": "2025-11-09T07:27:00.600000+09:00",
+          "latitude": 39.39,
+          "longitude": 143.451667,
+          "depth_km": 14.0,
+          "magnitude": 5.0,
+          "region": "三陸沖"
+        }
+      ]
+    },
+    {
+      "profile_id": "izu_islands",
+      "profile_label": "伊豆諸島",
+      "source": "Hirose et al. (2021)",
+      "parameters": {
+        "D_degrees": 0.2,
+        "Mf_min": 3.0,
+        "Tf_days": 1.0,
+        "Nf": 2,
+        "Ta_days": 4.0,
+        "target_M_min": 5.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 34.4,
+        "north": 34.7,
+        "west": 139.3,
+        "east": 139.6
+      },
+      "triggered_at": "2025-09-17T14:45:58.300000+09:00",
+      "expires_at": "2025-09-21T14:45:58.300000+09:00",
+      "cell_bounds": [
+        {
+          "south": 34.4,
+          "north": 34.6,
+          "west": 139.3,
+          "east": 139.5
+        },
+        {
+          "south": 34.4,
+          "north": 34.6,
+          "west": 139.4,
+          "east": 139.6
+        },
+        {
+          "south": 34.5,
+          "north": 34.7,
+          "west": 139.3,
+          "east": 139.5
+        },
+        {
+          "south": 34.5,
+          "north": 34.7,
+          "west": 139.4,
+          "east": 139.6
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 34.5,
+          "longitude": 139.4
+        },
+        {
+          "latitude": 34.5,
+          "longitude": 139.5
+        },
+        {
+          "latitude": 34.6,
+          "longitude": 139.4
+        },
+        {
+          "latitude": 34.6,
+          "longitude": 139.5
+        }
+      ],
+      "raw_cell_count": 4,
+      "foreshocks": [
+        {
+          "datetime_jst": "2025-09-17T06:33:59.600000+09:00",
+          "latitude": 34.556667,
+          "longitude": 139.435,
+          "depth_km": 13.0,
+          "magnitude": 4.0,
+          "region": "伊豆大島近海"
+        },
+        {
+          "datetime_jst": "2025-09-17T14:45:58.300000+09:00",
+          "latitude": 34.56,
+          "longitude": 139.425,
+          "depth_km": 14.0,
+          "magnitude": 3.2,
+          "region": "伊豆大島近海"
+        }
+      ]
+    },
+    {
+      "profile_id": "izu_islands",
+      "profile_label": "伊豆諸島",
+      "source": "Hirose et al. (2021)",
+      "parameters": {
+        "D_degrees": 0.2,
+        "Mf_min": 3.0,
+        "Tf_days": 1.0,
+        "Nf": 2,
+        "Ta_days": 4.0,
+        "target_M_min": 5.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 33.5,
+        "north": 33.800000000000004,
+        "west": 139.3,
+        "east": 139.6
+      },
+      "triggered_at": "2025-09-10T05:02:21.700000+09:00",
+      "expires_at": "2025-09-14T05:02:21.700000+09:00",
+      "cell_bounds": [
+        {
+          "south": 33.5,
+          "north": 33.7,
+          "west": 139.3,
+          "east": 139.5
+        },
+        {
+          "south": 33.5,
+          "north": 33.7,
+          "west": 139.4,
+          "east": 139.6
+        },
+        {
+          "south": 33.6,
+          "north": 33.800000000000004,
+          "west": 139.4,
+          "east": 139.6
+        },
+        {
+          "south": 33.6,
+          "north": 33.800000000000004,
+          "west": 139.3,
+          "east": 139.5
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 33.6,
+          "longitude": 139.4
+        },
+        {
+          "latitude": 33.6,
+          "longitude": 139.5
+        },
+        {
+          "latitude": 33.7,
+          "longitude": 139.5
+        },
+        {
+          "latitude": 33.7,
+          "longitude": 139.4
+        }
+      ],
+      "raw_cell_count": 4,
+      "foreshocks": [
+        {
+          "datetime_jst": "2025-09-09T20:08:23.300000+09:00",
+          "latitude": 33.683333,
+          "longitude": 139.471667,
+          "depth_km": 17.0,
+          "magnitude": 4.3,
+          "region": "三宅島近海"
+        },
+        {
+          "datetime_jst": "2025-09-10T05:02:21.700000+09:00",
+          "latitude": 33.685,
+          "longitude": 139.486667,
+          "depth_km": 17.0,
+          "magnitude": 3.7,
+          "region": "三宅島近海"
+        }
+      ]
+    },
+    {
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "source": "Maeda (1996)",
+      "parameters": {
+        "D_degrees": 0.5,
+        "Mf_min": 5.0,
+        "Tf_days": 10.0,
+        "Nf": 3,
+        "Ta_days": 5.0,
+        "target_M_min": 6.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 29.0,
+        "north": 29.75,
+        "west": 129.0,
+        "east": 129.5
+      },
+      "triggered_at": "2025-07-15T13:20:01.500000+09:00",
+      "expires_at": "2025-07-20T13:20:01.500000+09:00",
+      "cell_bounds": [
+        {
+          "south": 29.0,
+          "north": 29.5,
+          "west": 129.0,
+          "east": 129.5
+        },
+        {
+          "south": 29.25,
+          "north": 29.75,
+          "west": 129.0,
+          "east": 129.5
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 29.25,
+          "longitude": 129.25
+        },
+        {
+          "latitude": 29.5,
+          "longitude": 129.25
+        }
+      ],
+      "raw_cell_count": 2,
+      "foreshocks": [
+        {
+          "datetime_jst": "2025-07-07T00:12:07.800000+09:00",
+          "latitude": 29.348333,
+          "longitude": 129.475,
+          "depth_km": 22.0,
+          "magnitude": 5.1,
+          "region": "トカラ列島近海"
+        },
+        {
+          "datetime_jst": "2025-07-11T16:09:09.200000+09:00",
+          "latitude": 29.27,
+          "longitude": 129.458333,
+          "depth_km": 11.0,
+          "magnitude": 5.0,
+          "region": "トカラ列島近海"
+        },
+        {
+          "datetime_jst": "2025-07-15T13:20:01.500000+09:00",
+          "latitude": 29.321667,
+          "longitude": 129.48,
+          "depth_km": 12.0,
+          "magnitude": 5.4,
+          "region": "トカラ列島近海"
+        }
+      ]
+    },
+    {
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "source": "Maeda (1996)",
+      "parameters": {
+        "D_degrees": 0.5,
+        "Mf_min": 5.0,
+        "Tf_days": 10.0,
+        "Nf": 3,
+        "Ta_days": 5.0,
+        "target_M_min": 6.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 28.75,
+        "north": 29.25,
+        "west": 128.75,
+        "east": 129.5
+      },
+      "triggered_at": "2025-07-02T16:17:54.300000+09:00",
+      "expires_at": "2025-07-07T16:17:54.300000+09:00",
+      "cell_bounds": [
+        {
+          "south": 28.75,
+          "north": 29.25,
+          "west": 128.75,
+          "east": 129.25
+        },
+        {
+          "south": 28.75,
+          "north": 29.25,
+          "west": 129.0,
+          "east": 129.5
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 29.0,
+          "longitude": 129.0
+        },
+        {
+          "latitude": 29.0,
+          "longitude": 129.25
+        }
+      ],
+      "raw_cell_count": 2,
+      "foreshocks": [
+        {
+          "datetime_jst": "2025-07-02T14:25:24.200000+09:00",
+          "latitude": 29.235,
+          "longitude": 129.175,
+          "depth_km": 12.0,
+          "magnitude": 5.0,
+          "region": "トカラ列島近海"
+        },
+        {
+          "datetime_jst": "2025-07-02T14:53:24.200000+09:00",
+          "latitude": 29.238333,
+          "longitude": 129.068333,
+          "depth_km": 1.0,
+          "magnitude": 5.3,
+          "region": "トカラ列島近海"
+        },
+        {
+          "datetime_jst": "2025-07-02T16:17:54.300000+09:00",
+          "latitude": 29.23,
+          "longitude": 129.103333,
+          "depth_km": 4.0,
+          "magnitude": 5.0,
+          "region": "トカラ列島近海"
+        }
+      ]
+    },
+    {
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "source": "Maeda (1996)",
+      "parameters": {
+        "D_degrees": 0.5,
+        "Mf_min": 5.0,
+        "Tf_days": 10.0,
+        "Nf": 3,
+        "Ta_days": 5.0,
+        "target_M_min": 6.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 29.25,
+        "north": 29.75,
+        "west": 128.75,
+        "east": 129.25
+      },
+      "triggered_at": "2025-07-02T15:26:47.600000+09:00",
+      "expires_at": "2025-07-07T15:26:47.600000+09:00",
+      "cell_bounds": [
+        {
+          "south": 29.25,
+          "north": 29.75,
+          "west": 128.75,
+          "east": 129.25
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 29.5,
+          "longitude": 129.0
+        }
+      ],
+      "raw_cell_count": 1,
+      "foreshocks": [
+        {
+          "datetime_jst": "2025-07-02T14:51:47.100000+09:00",
+          "latitude": 29.251667,
+          "longitude": 129.086667,
+          "depth_km": 2.0,
+          "magnitude": 5.0,
+          "region": "トカラ列島近海"
+        },
+        {
+          "datetime_jst": "2025-07-02T14:59:00.700000+09:00",
+          "latitude": 29.255,
+          "longitude": 129.07,
+          "depth_km": 8.0,
+          "magnitude": 5.1,
+          "region": "トカラ列島近海"
+        },
+        {
+          "datetime_jst": "2025-07-02T15:26:47.600000+09:00",
+          "latitude": 29.256667,
+          "longitude": 129.051667,
+          "depth_km": 1.0,
+          "magnitude": 5.6,
+          "region": "トカラ列島近海"
+        }
+      ]
+    },
+    {
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "source": "Maeda (1996)",
+      "parameters": {
+        "D_degrees": 0.5,
+        "Mf_min": 5.0,
+        "Tf_days": 10.0,
+        "Nf": 3,
+        "Ta_days": 5.0,
+        "target_M_min": 6.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 29.0,
+        "north": 29.5,
+        "west": 128.75,
+        "east": 129.25
+      },
+      "triggered_at": "2025-07-02T14:53:24.200000+09:00",
+      "expires_at": "2025-07-07T14:53:24.200000+09:00",
+      "cell_bounds": [
+        {
+          "south": 29.0,
+          "north": 29.5,
+          "west": 128.75,
+          "east": 129.25
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 29.25,
+          "longitude": 129.0
+        }
+      ],
+      "raw_cell_count": 1,
+      "foreshocks": [
+        {
+          "datetime_jst": "2025-07-02T14:25:24.200000+09:00",
+          "latitude": 29.235,
+          "longitude": 129.175,
+          "depth_km": 12.0,
+          "magnitude": 5.0,
+          "region": "トカラ列島近海"
+        },
+        {
+          "datetime_jst": "2025-07-02T14:51:47.100000+09:00",
+          "latitude": 29.251667,
+          "longitude": 129.086667,
+          "depth_km": 2.0,
+          "magnitude": 5.0,
+          "region": "トカラ列島近海"
+        },
+        {
+          "datetime_jst": "2025-07-02T14:53:24.200000+09:00",
+          "latitude": 29.238333,
+          "longitude": 129.068333,
+          "depth_km": 1.0,
+          "magnitude": 5.3,
+          "region": "トカラ列島近海"
+        }
+      ]
+    },
+    {
+      "profile_id": "central_honshu",
+      "profile_label": "中部日本",
+      "source": "Hirose et al. (2021)",
+      "parameters": {
+        "D_degrees": 0.2,
+        "Mf_min": 2.0,
+        "Tf_days": 1.0,
+        "Nf": 5,
+        "Ta_days": 5.0,
+        "target_M_min": 5.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 36.699999999999996,
+        "north": 37.0,
+        "west": 137.6,
+        "east": 137.9
+      },
+      "triggered_at": "2025-07-01T11:32:22.800000+09:00",
+      "expires_at": "2025-07-06T11:32:22.800000+09:00",
+      "cell_bounds": [
+        {
+          "south": 36.699999999999996,
+          "north": 36.9,
+          "west": 137.6,
+          "east": 137.79999999999998
+        },
+        {
+          "south": 36.699999999999996,
+          "north": 36.9,
+          "west": 137.70000000000002,
+          "east": 137.9
+        },
+        {
+          "south": 36.8,
+          "north": 37.0,
+          "west": 137.6,
+          "east": 137.79999999999998
+        },
+        {
+          "south": 36.8,
+          "north": 37.0,
+          "west": 137.70000000000002,
+          "east": 137.9
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 36.8,
+          "longitude": 137.7
+        },
+        {
+          "latitude": 36.8,
+          "longitude": 137.8
+        },
+        {
+          "latitude": 36.9,
+          "longitude": 137.7
+        },
+        {
+          "latitude": 36.9,
+          "longitude": 137.8
+        }
+      ],
+      "raw_cell_count": 4,
+      "foreshocks": [
+        {
+          "datetime_jst": "2025-07-01T07:08:04.300000+09:00",
+          "latitude": 36.82,
+          "longitude": 137.791667,
+          "depth_km": 1.0,
+          "magnitude": 2.0,
+          "region": "新潟県上越地方"
+        },
+        {
+          "datetime_jst": "2025-07-01T07:50:35.400000+09:00",
+          "latitude": 36.82,
+          "longitude": 137.785,
+          "depth_km": 0.0,
+          "magnitude": 2.0,
+          "region": "新潟県上越地方"
+        },
+        {
+          "datetime_jst": "2025-07-01T08:15:23.800000+09:00",
+          "latitude": 36.821667,
+          "longitude": 137.783333,
+          "depth_km": 0.0,
+          "magnitude": 3.2,
+          "region": "新潟県上越地方"
+        },
+        {
+          "datetime_jst": "2025-07-01T11:08:04.100000+09:00",
+          "latitude": 36.821667,
+          "longitude": 137.798333,
+          "depth_km": 0.0,
+          "magnitude": 2.7,
+          "region": "新潟県上越地方"
+        },
+        {
+          "datetime_jst": "2025-07-01T11:32:22.800000+09:00",
+          "latitude": 36.821667,
+          "longitude": 137.793333,
+          "depth_km": 0.0,
+          "magnitude": 2.0,
+          "region": "新潟県上越地方"
+        }
+      ]
+    },
+    {
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "source": "Maeda (1996)",
+      "parameters": {
+        "D_degrees": 0.5,
+        "Mf_min": 5.0,
+        "Tf_days": 10.0,
+        "Nf": 3,
+        "Ta_days": 5.0,
+        "target_M_min": 6.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 29.0,
+        "north": 29.75,
+        "west": 129.0,
+        "east": 129.75
+      },
+      "triggered_at": "2025-06-24T16:04:14.100000+09:00",
+      "expires_at": "2025-06-29T16:04:14.100000+09:00",
+      "cell_bounds": [
+        {
+          "south": 29.0,
+          "north": 29.5,
+          "west": 129.0,
+          "east": 129.5
+        },
+        {
+          "south": 29.0,
+          "north": 29.5,
+          "west": 129.25,
+          "east": 129.75
+        },
+        {
+          "south": 29.25,
+          "north": 29.75,
+          "west": 129.0,
+          "east": 129.5
+        },
+        {
+          "south": 29.25,
+          "north": 29.75,
+          "west": 129.25,
+          "east": 129.75
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 29.25,
+          "longitude": 129.25
+        },
+        {
+          "latitude": 29.25,
+          "longitude": 129.5
+        },
+        {
+          "latitude": 29.5,
+          "longitude": 129.25
+        },
+        {
+          "latitude": 29.5,
+          "longitude": 129.5
+        }
+      ],
+      "raw_cell_count": 4,
+      "foreshocks": [
+        {
+          "datetime_jst": "2025-06-22T17:15:02.700000+09:00",
+          "latitude": 29.355,
+          "longitude": 129.283333,
+          "depth_km": 24.0,
+          "magnitude": 5.1,
+          "region": "トカラ列島近海"
+        },
+        {
+          "datetime_jst": "2025-06-23T23:36:19.100000+09:00",
+          "latitude": 29.325,
+          "longitude": 129.4,
+          "depth_km": 21.0,
+          "magnitude": 5.0,
+          "region": "トカラ列島近海"
+        },
+        {
+          "datetime_jst": "2025-06-24T16:04:14.100000+09:00",
+          "latitude": 29.313333,
+          "longitude": 129.378333,
+          "depth_km": 18.0,
+          "magnitude": 5.1,
+          "region": "トカラ列島近海"
+        }
+      ]
+    },
+    {
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "source": "Maeda (1996)",
+      "parameters": {
+        "D_degrees": 0.5,
+        "Mf_min": 5.0,
+        "Tf_days": 10.0,
+        "Nf": 3,
+        "Ta_days": 5.0,
+        "target_M_min": 6.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 42.5,
+        "north": 43.25,
+        "west": 146.5,
+        "east": 147.0
+      },
+      "triggered_at": "2025-06-22T06:25:42.600000+09:00",
+      "expires_at": "2025-06-27T06:25:42.600000+09:00",
+      "cell_bounds": [
+        {
+          "south": 42.5,
+          "north": 43.0,
+          "west": 146.5,
+          "east": 147.0
+        },
+        {
+          "south": 42.75,
+          "north": 43.25,
+          "west": 146.5,
+          "east": 147.0
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 42.75,
+          "longitude": 146.75
+        },
+        {
+          "latitude": 43.0,
+          "longitude": 146.75
+        }
+      ],
+      "raw_cell_count": 2,
+      "foreshocks": [
+        {
+          "datetime_jst": "2025-06-19T08:08:07.400000+09:00",
+          "latitude": 42.911667,
+          "longitude": 146.511667,
+          "depth_km": 25.0,
+          "magnitude": 6.0,
+          "region": "根室半島南東沖"
+        },
+        {
+          "datetime_jst": "2025-06-22T00:05:23.100000+09:00",
+          "latitude": 42.891667,
+          "longitude": 146.62,
+          "depth_km": 22.0,
+          "magnitude": 5.0,
+          "region": "根室半島南東沖"
+        },
+        {
+          "datetime_jst": "2025-06-22T06:25:42.600000+09:00",
+          "latitude": 42.87,
+          "longitude": 146.561667,
+          "depth_km": 20.0,
+          "magnitude": 5.1,
+          "region": "根室半島南東沖"
+        }
+      ]
+    },
+    {
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "source": "Maeda (1996)",
+      "parameters": {
+        "D_degrees": 0.5,
+        "Mf_min": 5.0,
+        "Tf_days": 10.0,
+        "Nf": 3,
+        "Ta_days": 5.0,
+        "target_M_min": 6.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 42.5,
+        "north": 43.25,
+        "west": 146.25,
+        "east": 146.75
+      },
+      "triggered_at": "2025-06-22T06:23:19.800000+09:00",
+      "expires_at": "2025-06-27T06:23:19.800000+09:00",
+      "cell_bounds": [
+        {
+          "south": 42.5,
+          "north": 43.0,
+          "west": 146.25,
+          "east": 146.75
+        },
+        {
+          "south": 42.75,
+          "north": 43.25,
+          "west": 146.25,
+          "east": 146.75
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 42.75,
+          "longitude": 146.5
+        },
+        {
+          "latitude": 43.0,
+          "longitude": 146.5
+        }
+      ],
+      "raw_cell_count": 2,
+      "foreshocks": [
+        {
+          "datetime_jst": "2025-06-19T08:08:07.400000+09:00",
+          "latitude": 42.911667,
+          "longitude": 146.511667,
+          "depth_km": 25.0,
+          "magnitude": 6.0,
+          "region": "根室半島南東沖"
+        },
+        {
+          "datetime_jst": "2025-06-22T00:05:23.100000+09:00",
+          "latitude": 42.891667,
+          "longitude": 146.62,
+          "depth_km": 22.0,
+          "magnitude": 5.0,
+          "region": "根室半島南東沖"
+        },
+        {
+          "datetime_jst": "2025-06-22T06:23:19.800000+09:00",
+          "latitude": 42.89,
+          "longitude": 146.491667,
+          "depth_km": 24.0,
+          "magnitude": 6.0,
+          "region": "根室半島南東沖"
+        }
+      ]
+    },
+    {
+      "profile_id": "central_honshu",
+      "profile_label": "中部日本",
+      "source": "Hirose et al. (2021)",
+      "parameters": {
+        "D_degrees": 0.2,
+        "Mf_min": 2.0,
+        "Tf_days": 1.0,
+        "Nf": 5,
+        "Ta_days": 5.0,
+        "target_M_min": 5.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 36.3,
+        "north": 36.6,
+        "west": 137.8,
+        "east": 138.1
+      },
+      "triggered_at": "2025-04-18T23:39:46.500000+09:00",
+      "expires_at": "2025-04-23T23:39:46.500000+09:00",
+      "cell_bounds": [
+        {
+          "south": 36.3,
+          "north": 36.5,
+          "west": 137.8,
+          "east": 138.0
+        },
+        {
+          "south": 36.3,
+          "north": 36.5,
+          "west": 137.9,
+          "east": 138.1
+        },
+        {
+          "south": 36.4,
+          "north": 36.6,
+          "west": 137.8,
+          "east": 138.0
+        },
+        {
+          "south": 36.4,
+          "north": 36.6,
+          "west": 137.9,
+          "east": 138.1
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 36.4,
+          "longitude": 137.9
+        },
+        {
+          "latitude": 36.4,
+          "longitude": 138.0
+        },
+        {
+          "latitude": 36.5,
+          "longitude": 137.9
+        },
+        {
+          "latitude": 36.5,
+          "longitude": 138.0
+        }
+      ],
+      "raw_cell_count": 4,
+      "foreshocks": [
+        {
+          "datetime_jst": "2025-04-18T18:26:27.900000+09:00",
+          "latitude": 36.466667,
+          "longitude": 137.913333,
+          "depth_km": 12.0,
+          "magnitude": 3.0,
+          "region": "長野県北部"
+        },
+        {
+          "datetime_jst": "2025-04-18T18:49:53.900000+09:00",
+          "latitude": 36.466667,
+          "longitude": 137.913333,
+          "depth_km": 11.0,
+          "magnitude": 2.4,
+          "region": "長野県北部"
+        },
+        {
+          "datetime_jst": "2025-04-18T19:28:12.400000+09:00",
+          "latitude": 36.465,
+          "longitude": 137.913333,
+          "depth_km": 12.0,
+          "magnitude": 2.2,
+          "region": "長野県北部"
+        },
+        {
+          "datetime_jst": "2025-04-18T20:19:28.600000+09:00",
+          "latitude": 36.468333,
+          "longitude": 137.913333,
+          "depth_km": 13.0,
+          "magnitude": 5.1,
+          "region": "長野県北部"
+        },
+        {
+          "datetime_jst": "2025-04-18T23:39:46.500000+09:00",
+          "latitude": 36.461667,
+          "longitude": 137.908333,
+          "depth_km": 13.0,
+          "magnitude": 4.5,
+          "region": "長野県北部"
+        }
+      ]
+    },
+    {
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "source": "Maeda (1996)",
+      "parameters": {
+        "D_degrees": 0.5,
+        "Mf_min": 5.0,
+        "Tf_days": 10.0,
+        "Nf": 3,
+        "Ta_days": 5.0,
+        "target_M_min": 6.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 28.5,
+        "north": 29.0,
+        "west": 130.25,
+        "east": 130.75
+      },
+      "triggered_at": "2025-03-11T11:10:46.400000+09:00",
+      "expires_at": "2025-03-16T11:10:46.400000+09:00",
+      "cell_bounds": [
+        {
+          "south": 28.5,
+          "north": 29.0,
+          "west": 130.25,
+          "east": 130.75
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 28.75,
+          "longitude": 130.5
+        }
+      ],
+      "raw_cell_count": 1,
+      "foreshocks": [
+        {
+          "datetime_jst": "2025-03-09T03:54:05.100000+09:00",
+          "latitude": 28.7,
+          "longitude": 130.25,
+          "depth_km": 62.0,
+          "magnitude": 5.8,
+          "region": "奄美大島北東沖"
+        },
+        {
+          "datetime_jst": "2025-03-09T08:42:54.700000+09:00",
+          "latitude": 28.72,
+          "longitude": 130.273333,
+          "depth_km": 63.0,
+          "magnitude": 5.9,
+          "region": "奄美大島北東沖"
+        },
+        {
+          "datetime_jst": "2025-03-11T11:10:46.400000+09:00",
+          "latitude": 28.765,
+          "longitude": 130.33,
+          "depth_km": 62.0,
+          "magnitude": 5.2,
+          "region": "奄美大島北東沖"
+        }
+      ]
+    },
+    {
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "source": "Maeda (1996)",
+      "parameters": {
+        "D_degrees": 0.5,
+        "Mf_min": 5.0,
+        "Tf_days": 10.0,
+        "Nf": 3,
+        "Ta_days": 5.0,
+        "target_M_min": 6.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 28.25,
+        "north": 29.0,
+        "west": 130.0,
+        "east": 130.5
+      },
+      "triggered_at": "2025-03-09T13:24:22.300000+09:00",
+      "expires_at": "2025-03-14T13:24:22.300000+09:00",
+      "cell_bounds": [
+        {
+          "south": 28.25,
+          "north": 28.75,
+          "west": 130.0,
+          "east": 130.5
+        },
+        {
+          "south": 28.5,
+          "north": 29.0,
+          "west": 130.0,
+          "east": 130.5
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 28.5,
+          "longitude": 130.25
+        },
+        {
+          "latitude": 28.75,
+          "longitude": 130.25
+        }
+      ],
+      "raw_cell_count": 2,
+      "foreshocks": [
+        {
+          "datetime_jst": "2025-03-09T03:54:05.100000+09:00",
+          "latitude": 28.7,
+          "longitude": 130.25,
+          "depth_km": 62.0,
+          "magnitude": 5.8,
+          "region": "奄美大島北東沖"
+        },
+        {
+          "datetime_jst": "2025-03-09T08:42:54.700000+09:00",
+          "latitude": 28.72,
+          "longitude": 130.273333,
+          "depth_km": 63.0,
+          "magnitude": 5.9,
+          "region": "奄美大島北東沖"
+        },
+        {
+          "datetime_jst": "2025-03-09T13:24:22.300000+09:00",
+          "latitude": 28.72,
+          "longitude": 130.206667,
+          "depth_km": 58.0,
+          "magnitude": 5.0,
+          "region": "奄美大島北東沖"
+        }
+      ]
+    },
+    {
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "source": "Maeda (1996)",
+      "parameters": {
+        "D_degrees": 0.5,
+        "Mf_min": 5.0,
+        "Tf_days": 10.0,
+        "Nf": 3,
+        "Ta_days": 5.0,
+        "target_M_min": 6.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 23.25,
+        "north": 23.75,
+        "west": 120.25,
+        "east": 120.75
+      },
+      "triggered_at": "2025-01-30T11:11:53.400000+09:00",
+      "expires_at": "2025-02-04T11:11:53.400000+09:00",
+      "cell_bounds": [
+        {
+          "south": 23.25,
+          "north": 23.75,
+          "west": 120.25,
+          "east": 120.75
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 23.5,
+          "longitude": 120.5
+        }
+      ],
+      "raw_cell_count": 1,
+      "foreshocks": [
+        {
+          "datetime_jst": "2025-01-21T01:17:26.600000+09:00",
+          "latitude": 23.275,
+          "longitude": 120.498333,
+          "depth_km": 8.0,
+          "magnitude": 6.1,
+          "region": "台湾付近"
+        },
+        {
+          "datetime_jst": "2025-01-25T20:49:16.800000+09:00",
+          "latitude": 23.31,
+          "longitude": 120.466667,
+          "depth_km": 0.0,
+          "magnitude": 5.4,
+          "region": "台湾付近"
+        },
+        {
+          "datetime_jst": "2025-01-30T11:11:53.400000+09:00",
+          "latitude": 23.266667,
+          "longitude": 120.526667,
+          "depth_km": 3.0,
+          "magnitude": 5.2,
+          "region": "台湾付近"
+        }
+      ]
+    },
+    {
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "source": "Maeda (1996)",
+      "parameters": {
+        "D_degrees": 0.5,
+        "Mf_min": 5.0,
+        "Tf_days": 10.0,
+        "Nf": 3,
+        "Ta_days": 5.0,
+        "target_M_min": 6.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 23.0,
+        "north": 23.5,
+        "west": 120.0,
+        "east": 120.75
+      },
+      "triggered_at": "2025-01-26T08:38:52+09:00",
+      "expires_at": "2025-01-31T08:38:52+09:00",
+      "cell_bounds": [
+        {
+          "south": 23.0,
+          "north": 23.5,
+          "west": 120.0,
+          "east": 120.5
+        },
+        {
+          "south": 23.0,
+          "north": 23.5,
+          "west": 120.25,
+          "east": 120.75
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 23.25,
+          "longitude": 120.25
+        },
+        {
+          "latitude": 23.25,
+          "longitude": 120.5
+        }
+      ],
+      "raw_cell_count": 2,
+      "foreshocks": [
+        {
+          "datetime_jst": "2025-01-21T01:17:26.600000+09:00",
+          "latitude": 23.275,
+          "longitude": 120.498333,
+          "depth_km": 8.0,
+          "magnitude": 6.1,
+          "region": "台湾付近"
+        },
+        {
+          "datetime_jst": "2025-01-25T20:49:16.800000+09:00",
+          "latitude": 23.31,
+          "longitude": 120.466667,
+          "depth_km": 0.0,
+          "magnitude": 5.4,
+          "region": "台湾付近"
+        },
+        {
+          "datetime_jst": "2025-01-26T08:38:52+09:00",
+          "latitude": 23.216667,
+          "longitude": 120.436667,
+          "depth_km": 0.0,
+          "magnitude": 5.5,
+          "region": "台湾付近"
+        }
+      ]
+    },
+    {
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "source": "Maeda (1996)",
+      "parameters": {
+        "D_degrees": 0.5,
+        "Mf_min": 5.0,
+        "Tf_days": 10.0,
+        "Nf": 3,
+        "Ta_days": 5.0,
+        "target_M_min": 6.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 24.75,
+        "north": 25.25,
+        "west": 123.25,
+        "east": 124.0
+      },
+      "triggered_at": "2025-01-19T04:31:27.700000+09:00",
+      "expires_at": "2025-01-24T04:31:27.700000+09:00",
+      "cell_bounds": [
+        {
+          "south": 24.75,
+          "north": 25.25,
+          "west": 123.25,
+          "east": 123.75
+        },
+        {
+          "south": 24.75,
+          "north": 25.25,
+          "west": 123.5,
+          "east": 124.0
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 25.0,
+          "longitude": 123.5
+        },
+        {
+          "latitude": 25.0,
+          "longitude": 123.75
+        }
+      ],
+      "raw_cell_count": 2,
+      "foreshocks": [
+        {
+          "datetime_jst": "2025-01-19T01:09:04.600000+09:00",
+          "latitude": 25.005,
+          "longitude": 123.536667,
+          "depth_km": 21.0,
+          "magnitude": 5.0,
+          "region": "石垣島北西沖"
+        },
+        {
+          "datetime_jst": "2025-01-19T01:53:59.900000+09:00",
+          "latitude": 24.968333,
+          "longitude": 123.518333,
+          "depth_km": 28.0,
+          "magnitude": 5.1,
+          "region": "石垣島近海"
+        },
+        {
+          "datetime_jst": "2025-01-19T04:31:27.700000+09:00",
+          "latitude": 25.041667,
+          "longitude": 123.523333,
+          "depth_km": 5.0,
+          "magnitude": 5.4,
+          "region": "石垣島北西沖"
+        }
+      ]
+    },
+    {
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "source": "Maeda (1996)",
+      "parameters": {
+        "D_degrees": 0.5,
+        "Mf_min": 5.0,
+        "Tf_days": 10.0,
+        "Nf": 3,
+        "Ta_days": 5.0,
+        "target_M_min": 6.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 25.25,
+        "north": 25.75,
+        "west": 142.75,
+        "east": 143.25
+      },
+      "triggered_at": "2024-11-08T05:11:23+09:00",
+      "expires_at": "2024-11-13T05:11:23+09:00",
+      "cell_bounds": [
+        {
+          "south": 25.25,
+          "north": 25.75,
+          "west": 142.75,
+          "east": 143.25
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 25.5,
+          "longitude": 143.0
+        }
+      ],
+      "raw_cell_count": 1,
+      "foreshocks": [
+        {
+          "datetime_jst": "2024-11-07T11:12:33.200000+09:00",
+          "latitude": 25.288333,
+          "longitude": 143.186667,
+          "depth_km": 46.0,
+          "magnitude": 5.2,
+          "region": "硫黄島近海"
+        },
+        {
+          "datetime_jst": "2024-11-07T21:05:14.100000+09:00",
+          "latitude": 25.585,
+          "longitude": 143.236667,
+          "depth_km": 0.0,
+          "magnitude": 5.1,
+          "region": "硫黄島近海"
+        },
+        {
+          "datetime_jst": "2024-11-08T05:11:23+09:00",
+          "latitude": 25.528333,
+          "longitude": 143.193333,
+          "depth_km": 1.0,
+          "magnitude": 5.0,
+          "region": "硫黄島近海"
+        }
+      ]
+    },
+    {
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "source": "Maeda (1996)",
+      "parameters": {
+        "D_degrees": 0.5,
+        "Mf_min": 5.0,
+        "Tf_days": 10.0,
+        "Nf": 3,
+        "Ta_days": 5.0,
+        "target_M_min": 6.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 25.5,
+        "north": 26.0,
+        "west": 143.25,
+        "east": 143.75
+      },
+      "triggered_at": "2024-11-08T00:54:04.500000+09:00",
+      "expires_at": "2024-11-13T00:54:04.500000+09:00",
+      "cell_bounds": [
+        {
+          "south": 25.5,
+          "north": 26.0,
+          "west": 143.25,
+          "east": 143.75
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 25.75,
+          "longitude": 143.5
+        }
+      ],
+      "raw_cell_count": 1,
+      "foreshocks": [
+        {
+          "datetime_jst": "2024-11-03T21:06:43+09:00",
+          "latitude": 25.51,
+          "longitude": 143.308333,
+          "depth_km": 0.0,
+          "magnitude": 5.0,
+          "region": "硫黄島近海"
+        },
+        {
+          "datetime_jst": "2024-11-07T07:54:58.800000+09:00",
+          "latitude": 25.526667,
+          "longitude": 143.496667,
+          "depth_km": 0.0,
+          "magnitude": 6.3,
+          "region": "硫黄島近海"
+        },
+        {
+          "datetime_jst": "2024-11-08T00:54:04.500000+09:00",
+          "latitude": 25.505,
+          "longitude": 143.265,
+          "depth_km": 8.0,
+          "magnitude": 5.0,
+          "region": "硫黄島近海"
+        }
+      ]
+    },
+    {
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "source": "Maeda (1996)",
+      "parameters": {
+        "D_degrees": 0.5,
+        "Mf_min": 5.0,
+        "Tf_days": 10.0,
+        "Nf": 3,
+        "Ta_days": 5.0,
+        "target_M_min": 6.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 25.5,
+        "north": 26.0,
+        "west": 143.0,
+        "east": 143.5
+      },
+      "triggered_at": "2024-11-07T21:05:14.100000+09:00",
+      "expires_at": "2024-11-12T21:05:14.100000+09:00",
+      "cell_bounds": [
+        {
+          "south": 25.5,
+          "north": 26.0,
+          "west": 143.0,
+          "east": 143.5
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 25.75,
+          "longitude": 143.25
+        }
+      ],
+      "raw_cell_count": 1,
+      "foreshocks": [
+        {
+          "datetime_jst": "2024-11-03T21:06:43+09:00",
+          "latitude": 25.51,
+          "longitude": 143.308333,
+          "depth_km": 0.0,
+          "magnitude": 5.0,
+          "region": "硫黄島近海"
+        },
+        {
+          "datetime_jst": "2024-11-07T07:54:58.800000+09:00",
+          "latitude": 25.526667,
+          "longitude": 143.496667,
+          "depth_km": 0.0,
+          "magnitude": 6.3,
+          "region": "硫黄島近海"
+        },
+        {
+          "datetime_jst": "2024-11-07T21:05:14.100000+09:00",
+          "latitude": 25.585,
+          "longitude": 143.236667,
+          "depth_km": 0.0,
+          "magnitude": 5.1,
+          "region": "硫黄島近海"
+        }
+      ]
+    },
+    {
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "source": "Maeda (1996)",
+      "parameters": {
+        "D_degrees": 0.5,
+        "Mf_min": 5.0,
+        "Tf_days": 10.0,
+        "Nf": 3,
+        "Ta_days": 5.0,
+        "target_M_min": 6.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 25.0,
+        "north": 25.5,
+        "west": 143.0,
+        "east": 143.75
+      },
+      "triggered_at": "2024-11-03T21:20:44.500000+09:00",
+      "expires_at": "2024-11-08T21:20:44.500000+09:00",
+      "cell_bounds": [
+        {
+          "south": 25.0,
+          "north": 25.5,
+          "west": 143.0,
+          "east": 143.5
+        },
+        {
+          "south": 25.0,
+          "north": 25.5,
+          "west": 143.25,
+          "east": 143.75
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 25.25,
+          "longitude": 143.25
+        },
+        {
+          "latitude": 25.25,
+          "longitude": 143.5
+        }
+      ],
+      "raw_cell_count": 2,
+      "foreshocks": [
+        {
+          "datetime_jst": "2024-11-03T04:28:56.800000+09:00",
+          "latitude": 25.486667,
+          "longitude": 143.268333,
+          "depth_km": 6.0,
+          "magnitude": 5.0,
+          "region": "硫黄島近海"
+        },
+        {
+          "datetime_jst": "2024-11-03T21:09:48.700000+09:00",
+          "latitude": 25.448333,
+          "longitude": 143.326667,
+          "depth_km": 9.0,
+          "magnitude": 5.2,
+          "region": "硫黄島近海"
+        },
+        {
+          "datetime_jst": "2024-11-03T21:20:44.500000+09:00",
+          "latitude": 25.435,
+          "longitude": 143.435,
+          "depth_km": 9.0,
+          "magnitude": 5.1,
+          "region": "硫黄島近海"
+        }
+      ]
+    },
+    {
+      "profile_id": "izu_islands",
+      "profile_label": "伊豆諸島",
+      "source": "Hirose et al. (2021)",
+      "parameters": {
+        "D_degrees": 0.2,
+        "Mf_min": 3.0,
+        "Tf_days": 1.0,
+        "Nf": 2,
+        "Ta_days": 4.0,
+        "target_M_min": 5.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 33.9,
+        "north": 34.2,
+        "west": 138.8,
+        "east": 139.1
+      },
+      "triggered_at": "2024-09-16T07:31:28.400000+09:00",
+      "expires_at": "2024-09-20T07:31:28.400000+09:00",
+      "cell_bounds": [
+        {
+          "south": 33.9,
+          "north": 34.1,
+          "west": 138.8,
+          "east": 139.0
+        },
+        {
+          "south": 33.9,
+          "north": 34.1,
+          "west": 138.9,
+          "east": 139.1
+        },
+        {
+          "south": 34.0,
+          "north": 34.2,
+          "west": 138.8,
+          "east": 139.0
+        },
+        {
+          "south": 34.0,
+          "north": 34.2,
+          "west": 138.9,
+          "east": 139.1
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 34.0,
+          "longitude": 138.9
+        },
+        {
+          "latitude": 34.0,
+          "longitude": 139.0
+        },
+        {
+          "latitude": 34.1,
+          "longitude": 138.9
+        },
+        {
+          "latitude": 34.1,
+          "longitude": 139.0
+        }
+      ],
+      "raw_cell_count": 4,
+      "foreshocks": [
+        {
+          "datetime_jst": "2024-09-16T05:15:50.100000+09:00",
+          "latitude": 34.031667,
+          "longitude": 138.978333,
+          "depth_km": 11.0,
+          "magnitude": 3.4,
+          "region": "新島・神津島近海"
+        },
+        {
+          "datetime_jst": "2024-09-16T07:31:28.400000+09:00",
+          "latitude": 34.031667,
+          "longitude": 138.973333,
+          "depth_km": 12.0,
+          "magnitude": 3.4,
+          "region": "新島・神津島近海"
+        }
+      ]
+    },
+    {
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "source": "Maeda (1996)",
+      "parameters": {
+        "D_degrees": 0.5,
+        "Mf_min": 5.0,
+        "Tf_days": 10.0,
+        "Nf": 3,
+        "Ta_days": 5.0,
+        "target_M_min": 6.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 37.25,
+        "north": 37.75,
+        "west": 137.0,
+        "east": 137.5
+      },
+      "triggered_at": "2024-01-01T16:10:22.500000+09:00",
+      "expires_at": "2024-01-06T16:10:22.500000+09:00",
+      "cell_bounds": [
+        {
+          "south": 37.25,
+          "north": 37.75,
+          "west": 137.0,
+          "east": 137.5
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 37.5,
+          "longitude": 137.25
+        }
+      ],
+      "raw_cell_count": 1,
+      "foreshocks": [
+        {
+          "datetime_jst": "2024-01-01T16:06:06.100000+09:00",
+          "latitude": 37.51,
+          "longitude": 137.245,
+          "depth_km": 12.0,
+          "magnitude": 5.5,
+          "region": "石川県能登地方"
+        },
+        {
+          "datetime_jst": "2024-01-01T16:10:09.500000+09:00",
+          "latitude": 37.506667,
+          "longitude": 137.23,
+          "depth_km": 10.0,
+          "magnitude": 5.9,
+          "region": "石川県能登地方"
+        },
+        {
+          "datetime_jst": "2024-01-01T16:10:22.500000+09:00",
+          "latitude": 37.495,
+          "longitude": 137.27,
+          "depth_km": 16.0,
+          "magnitude": 7.6,
+          "region": "石川県能登地方"
+        }
+      ]
+    }
+  ]
+}

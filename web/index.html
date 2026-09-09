@@ -6,6 +6,7 @@
   <meta name="description" content="気象庁の震源データを加工したb値分布の研究用ビューア">
   <title>JMA b-value map</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="alert.css">
 </head>
 <body>
   <header class="hero">
@@ -18,6 +19,24 @@
   </header>
 
   <main>
+    <section class="alert-panel" aria-live="polite">
+      <div class="alert-heading"><div><p class="eyebrow dark">RESEARCH ACTIVITY MONITOR</p><h2>前震活動・条件一致モニター</h2></div><strong id="alert-state">確認中</strong></div>
+      <p id="alert-summary">最新カタログを確認しています。</p><div id="alert-list" class="alert-list"></div>
+      <details><summary>判定条件と重要な注意</summary><p>岩手県沖・宮城県沖・茨城県沖・中部日本・伊豆諸島ではHirose et al. (2021)の地域別条件と深さ範囲を優先し、その他ではMaeda (1996)の全国条件を使います。候補抽出前に論文の式(1)〜(3)で小余震を除外します。</p><p><strong>これは地震警報・地震予知ではありません。</strong>過去研究の条件に現在の暫定カタログが一致した場所を機械的に示す研究用試作です。防災判断には気象庁・自治体の公式情報を利用してください。</p></details>
+    </section>
+    <section class="backtest-panel">
+      <div class="alert-heading"><div><p class="eyebrow dark">RETROSPECTIVE CHECK</p><h2>2024年以降の検証事例</h2></div></div>
+      <p id="case-summary">検証結果を確認しています。</p>
+      <div class="score-grid" aria-live="polite">
+        <div><span>対象本震</span><strong id="score-targets">—</strong></div>
+        <div><span>的中</span><strong id="score-hits">—</strong></div>
+        <div><span>予知率（AR）</span><strong id="score-detection">—</strong></div>
+        <div><span>適中率（TR）</span><strong id="score-precision">—</strong></div>
+      </div>
+      <div class="case-switch" role="group" aria-label="検証分類"><button class="active" data-case="hits">的中</button><button data-case="misses">見逃し</button><button data-case="false_alarms">空振り</button></div>
+      <div id="case-list" class="case-list"></div>
+      <p class="case-note">論文に従い、各系列で条件を満たすに至ったNf個目の地震を「アラーム地震」とします。同じ地震が重複格子で条件を満たしても1件として数えます。AR＝予測された対象本震数÷全対象本震数、TR＝適中したアラーム地震数÷全アラーム地震数です。</p>
+    </section>
     <section class="controls" aria-label="表示設定">
       <label>表示期間<select id="dataset"><option>データを確認中…</option></select></label>
       <div class="switch" role="group" aria-label="図の種類">

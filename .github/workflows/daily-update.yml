@@ -62,11 +62,16 @@ jobs:
             --output-dir web/data/recent
           python generate_web_manifest.py
 
+      - name: Rebuild foreshock activity monitor
+        run: |
+          python generate_foreshock_alerts.py data/catalog/provisional_*.csv
+          python generate_foreshock_backtest.py data/catalog/provisional_*.csv --start 2024-01-01
+
       - name: Commit refreshed public data and figures
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/catalog/provisional_*.csv web/data/recent web/manifest.json
+          git add data/catalog/provisional_*.csv web/data/recent web/data/alerts web/manifest.json
           if ! git diff --cached --quiet; then
             git commit -m "Update JMA data and recent maps"
             git push
