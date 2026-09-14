@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-14T06:21:44.277658+09:00",
+  "generated_at": "2026-09-15T06:22:36.832137+09:00",
   "period_start": "2024-01-01T00:00:00+09:00",
-  "period_end": "2026-09-12T23:50:31.900000+09:00",
+  "period_end": "2026-09-13T23:42:32.500000+09:00",
   "definitions": {
     "hit": "対象本震がアラーム地震に対応するいずれかのセル内で警報期間中に発生",
     "miss": "対象本震に対応する事前判定なし",
@@ -15,15 +15,15 @@
     "misses": 43,
     "targets": 46,
     "successful_alarm_earthquakes": 4,
-    "false_alarm_earthquakes": 28,
-    "alarm_earthquakes": 32,
-    "alarms_raw_cells": 74,
-    "small_aftershocks_removed": 32959,
+    "false_alarm_earthquakes": 29,
+    "alarm_earthquakes": 33,
+    "alarms_raw_cells": 78,
+    "small_aftershocks_removed": 32976,
     "target_aftershocks_removed": 202
   },
   "rates": {
     "alarm_rate": 0.06521739130434782,
-    "truth_rate": 0.125
+    "truth_rate": 0.12121212121212122
   },
   "hits": [
     {
@@ -923,6 +923,115 @@
     }
   ],
   "false_alarms": [
+    {
+      "profile_id": "central_honshu",
+      "profile_label": "中部日本",
+      "source": "Hirose et al. (2021)",
+      "parameters": {
+        "D_degrees": 0.2,
+        "Mf_min": 2.0,
+        "Tf_days": 1.0,
+        "Nf": 5,
+        "Ta_days": 5.0,
+        "target_M_min": 5.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 36.199999999999996,
+        "north": 36.5,
+        "west": 137.5,
+        "east": 137.79999999999998
+      },
+      "triggered_at": "2026-09-13T01:03:19.100000+09:00",
+      "expires_at": "2026-09-18T01:03:19.100000+09:00",
+      "cell_bounds": [
+        {
+          "south": 36.199999999999996,
+          "north": 36.4,
+          "west": 137.5,
+          "east": 137.7
+        },
+        {
+          "south": 36.199999999999996,
+          "north": 36.4,
+          "west": 137.6,
+          "east": 137.79999999999998
+        },
+        {
+          "south": 36.3,
+          "north": 36.5,
+          "west": 137.5,
+          "east": 137.7
+        },
+        {
+          "south": 36.3,
+          "north": 36.5,
+          "west": 137.6,
+          "east": 137.79999999999998
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 36.3,
+          "longitude": 137.6
+        },
+        {
+          "latitude": 36.3,
+          "longitude": 137.7
+        },
+        {
+          "latitude": 36.4,
+          "longitude": 137.6
+        },
+        {
+          "latitude": 36.4,
+          "longitude": 137.7
+        }
+      ],
+      "raw_cell_count": 4,
+      "foreshocks": [
+        {
+          "datetime_jst": "2026-09-12T02:32:14.300000+09:00",
+          "latitude": 36.385,
+          "longitude": 137.628333,
+          "depth_km": 2.0,
+          "magnitude": 2.6,
+          "region": "長野県北部"
+        },
+        {
+          "datetime_jst": "2026-09-13T00:51:12.300000+09:00",
+          "latitude": 36.386667,
+          "longitude": 137.63,
+          "depth_km": 2.0,
+          "magnitude": 2.4,
+          "region": "長野県北部"
+        },
+        {
+          "datetime_jst": "2026-09-13T01:03:06.100000+09:00",
+          "latitude": 36.386667,
+          "longitude": 137.626667,
+          "depth_km": 1.0,
+          "magnitude": 2.2,
+          "region": "長野県北部"
+        },
+        {
+          "datetime_jst": "2026-09-13T01:03:11.800000+09:00",
+          "latitude": 36.39,
+          "longitude": 137.63,
+          "depth_km": 4.0,
+          "magnitude": 2.2,
+          "region": "長野県北部"
+        },
+        {
+          "datetime_jst": "2026-09-13T01:03:19.100000+09:00",
+          "latitude": 36.385,
+          "longitude": 137.63,
+          "depth_km": 1.0,
+          "magnitude": 2.8,
+          "region": "長野県北部"
+        }
+      ]
+    },
     {
       "profile_id": "central_honshu",
       "profile_label": "中部日本",
