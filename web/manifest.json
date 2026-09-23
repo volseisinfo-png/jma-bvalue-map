@@ -1,60 +1,60 @@
 {
-  "updated_at": "2026-09-22T21:18:48.065316+00:00",
+  "updated_at": "2026-09-23T21:20:54.156636+00:00",
   "entries": [
     {
-      "id": "1month_20260822_20260921_1deg",
+      "id": "1month_20260823_20260922_1deg",
       "group": "recent",
       "label": "最近1か月",
       "period": "1month",
-      "date_start": "20260822",
-      "date_end": "20260921",
+      "date_start": "20260823",
+      "date_end": "20260922",
       "grid_degrees": 1.0,
-      "map": "data/recent/bvalue_map_1month_20260822_20260921_1deg.png",
-      "fmd": "data/recent/overall_fmd_1month_20260822_20260921_1deg.png"
+      "map": "data/recent/bvalue_map_1month_20260823_20260922_1deg.png",
+      "fmd": "data/recent/overall_fmd_1month_20260823_20260922_1deg.png"
     },
     {
-      "id": "6months_20260322_20260921_1deg",
+      "id": "6months_20260323_20260922_1deg",
       "group": "recent",
       "label": "最近6か月",
       "period": "6months",
-      "date_start": "20260322",
-      "date_end": "20260921",
+      "date_start": "20260323",
+      "date_end": "20260922",
       "grid_degrees": 1.0,
-      "map": "data/recent/bvalue_map_6months_20260322_20260921_1deg.png",
-      "fmd": "data/recent/overall_fmd_6months_20260322_20260921_1deg.png"
+      "map": "data/recent/bvalue_map_6months_20260323_20260922_1deg.png",
+      "fmd": "data/recent/overall_fmd_6months_20260323_20260922_1deg.png"
     },
     {
-      "id": "1year_20250922_20260921_1deg",
+      "id": "1year_20250923_20260922_1deg",
       "group": "recent",
       "label": "最近1年",
       "period": "1year",
-      "date_start": "20250922",
-      "date_end": "20260921",
+      "date_start": "20250923",
+      "date_end": "20260922",
       "grid_degrees": 1.0,
-      "map": "data/recent/bvalue_map_1year_20250922_20260921_1deg.png",
-      "fmd": "data/recent/overall_fmd_1year_20250922_20260921_1deg.png"
+      "map": "data/recent/bvalue_map_1year_20250923_20260922_1deg.png",
+      "fmd": "data/recent/overall_fmd_1year_20250923_20260922_1deg.png"
     },
     {
-      "id": "5years_20210922_20260921_0p5deg",
+      "id": "5years_20210923_20260922_0p5deg",
       "group": "recent",
       "label": "最近5年",
       "period": "5years",
-      "date_start": "20210922",
-      "date_end": "20260921",
+      "date_start": "20210923",
+      "date_end": "20260922",
       "grid_degrees": 0.5,
-      "map": "data/recent/bvalue_map_5years_20210922_20260921_0p5deg.png",
-      "fmd": "data/recent/overall_fmd_5years_20210922_20260921_0p5deg.png"
+      "map": "data/recent/bvalue_map_5years_20210923_20260922_0p5deg.png",
+      "fmd": "data/recent/overall_fmd_5years_20210923_20260922_0p5deg.png"
     },
     {
-      "id": "10years_20160922_20260921_0p5deg",
+      "id": "10years_20160923_20260922_0p5deg",
       "group": "recent",
       "label": "最近10年",
       "period": "10years",
-      "date_start": "20160922",
-      "date_end": "20260921",
+      "date_start": "20160923",
+      "date_end": "20260922",
       "grid_degrees": 0.5,
-      "map": "data/recent/bvalue_map_10years_20160922_20260921_0p5deg.png",
-      "fmd": "data/recent/overall_fmd_10years_20160922_20260921_0p5deg.png"
+      "map": "data/recent/bvalue_map_10years_20160923_20260922_0p5deg.png",
+      "fmd": "data/recent/overall_fmd_10years_20160923_20260922_0p5deg.png"
     },
     {
       "id": "all_0p5deg",
