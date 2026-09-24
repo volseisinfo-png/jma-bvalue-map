@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-24T06:22:46.387061+09:00",
+  "generated_at": "2026-09-25T06:22:21.365465+09:00",
   "period_start": "2024-01-01T00:00:00+09:00",
-  "period_end": "2026-09-22T23:58:26.900000+09:00",
+  "period_end": "2026-09-23T23:54:55.600000+09:00",
   "definitions": {
     "hit": "対象本震がアラーム地震に対応するいずれかのセル内で警報期間中に発生",
     "miss": "対象本震に対応する事前判定なし",
@@ -12,17 +12,17 @@
   },
   "counts": {
     "hits": 3,
-    "misses": 43,
-    "targets": 46,
+    "misses": 44,
+    "targets": 47,
     "successful_alarm_earthquakes": 4,
     "false_alarm_earthquakes": 29,
     "alarm_earthquakes": 33,
     "alarms_raw_cells": 78,
-    "small_aftershocks_removed": 33123,
+    "small_aftershocks_removed": 33136,
     "target_aftershocks_removed": 202
   },
   "rates": {
-    "alarm_rate": 0.06521739130434782,
+    "alarm_rate": 0.06382978723404255,
     "truth_rate": 0.12121212121212122
   },
   "hits": [
@@ -362,6 +362,19 @@
     }
   ],
   "misses": [
+    {
+      "target": {
+        "datetime_jst": "2026-09-23T22:01:50.100000+09:00",
+        "latitude": 21.713333,
+        "longitude": 143.025,
+        "depth_km": 306.0,
+        "magnitude": 6.0,
+        "region": "マリアナ諸島"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
     {
       "target": {
         "datetime_jst": "2026-08-23T22:44:54.100000+09:00",
