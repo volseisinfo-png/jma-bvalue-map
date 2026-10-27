@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-26T08:13:21.891962+09:00",
+  "generated_at": "2026-10-27T09:26:34.655161+09:00",
   "period_start": "2024-01-01T00:00:00+09:00",
-  "period_end": "2026-10-24T23:30:24.100000+09:00",
+  "period_end": "2026-10-25T23:47:27.600000+09:00",
   "definitions": {
     "hit": "対象本震がアラーム地震に対応するいずれかのセル内で警報期間中に発生",
     "miss": "対象本震に対応する事前判定なし",
@@ -12,17 +12,17 @@
   },
   "counts": {
     "hits": 3,
-    "misses": 45,
-    "targets": 48,
+    "misses": 46,
+    "targets": 49,
     "successful_alarm_earthquakes": 4,
     "false_alarm_earthquakes": 30,
     "alarm_earthquakes": 34,
     "alarms_raw_cells": 82,
-    "small_aftershocks_removed": 33606,
+    "small_aftershocks_removed": 33624,
     "target_aftershocks_removed": 204
   },
   "rates": {
-    "alarm_rate": 0.0625,
+    "alarm_rate": 0.061224489795918366,
     "truth_rate": 0.11764705882352941
   },
   "hits": [
@@ -362,6 +362,19 @@
     }
   ],
   "misses": [
+    {
+      "target": {
+        "datetime_jst": "2026-10-25T11:09:22+09:00",
+        "latitude": 27.778333,
+        "longitude": 139.928333,
+        "depth_km": 507.0,
+        "magnitude": 6.8,
+        "region": "小笠原諸島西方沖"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
     {
       "target": {
         "datetime_jst": "2026-10-04T20:12:50.500000+09:00",
