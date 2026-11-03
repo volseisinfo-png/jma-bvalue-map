@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-02T09:38:06.797173+09:00",
+  "generated_at": "2026-11-03T11:56:05.745847+09:00",
   "period_start": "2024-01-01T00:00:00+09:00",
-  "period_end": "2026-10-31T23:13:48.300000+09:00",
+  "period_end": "2026-11-01T23:53:39+09:00",
   "definitions": {
     "hit": "対象本震がアラーム地震に対応するいずれかのセル内で警報期間中に発生",
     "miss": "対象本震に対応する事前判定なし",
@@ -12,17 +12,17 @@
   },
   "counts": {
     "hits": 3,
-    "misses": 46,
-    "targets": 49,
+    "misses": 47,
+    "targets": 50,
     "successful_alarm_earthquakes": 4,
     "false_alarm_earthquakes": 30,
     "alarm_earthquakes": 34,
     "alarms_raw_cells": 82,
-    "small_aftershocks_removed": 33744,
+    "small_aftershocks_removed": 33754,
     "target_aftershocks_removed": 205
   },
   "rates": {
-    "alarm_rate": 0.061224489795918366,
+    "alarm_rate": 0.06,
     "truth_rate": 0.11764705882352941
   },
   "hits": [
@@ -362,6 +362,19 @@
     }
   ],
   "misses": [
+    {
+      "target": {
+        "datetime_jst": "2026-11-01T07:15:01.500000+09:00",
+        "latitude": 33.798333,
+        "longitude": 137.168333,
+        "depth_km": 363.0,
+        "magnitude": 6.1,
+        "region": "三重県南東沖"
+      },
+      "profile_id": "national",
+      "profile_label": "その他の全国域",
+      "matching_alarms": []
+    },
     {
       "target": {
         "datetime_jst": "2026-10-25T11:09:22+09:00",
