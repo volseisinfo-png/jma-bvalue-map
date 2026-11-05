@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-04T10:17:39.654930+09:00",
+  "generated_at": "2026-11-05T10:28:17.691721+09:00",
   "period_start": "2024-01-01T00:00:00+09:00",
-  "period_end": "2026-11-02T23:09:52.900000+09:00",
+  "period_end": "2026-11-03T23:27:50.900000+09:00",
   "definitions": {
     "hit": "対象本震がアラーム地震に対応するいずれかのセル内で警報期間中に発生",
     "miss": "対象本震に対応する事前判定なし",
@@ -18,7 +18,7 @@
     "false_alarm_earthquakes": 30,
     "alarm_earthquakes": 34,
     "alarms_raw_cells": 82,
-    "small_aftershocks_removed": 33763,
+    "small_aftershocks_removed": 33772,
     "target_aftershocks_removed": 205
   },
   "rates": {
