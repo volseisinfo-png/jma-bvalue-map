@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-10T12:29:34.337516+09:00",
+  "generated_at": "2026-11-11T10:13:40.467944+09:00",
   "period_start": "2024-01-01T00:00:00+09:00",
-  "period_end": "2026-11-08T23:31:57.300000+09:00",
+  "period_end": "2026-11-09T23:18:30.800000+09:00",
   "definitions": {
     "hit": "対象本震がアラーム地震に対応するいずれかのセル内で警報期間中に発生",
     "miss": "対象本震に対応する事前判定なし",
@@ -15,15 +15,15 @@
     "misses": 48,
     "targets": 51,
     "successful_alarm_earthquakes": 4,
-    "false_alarm_earthquakes": 30,
-    "alarm_earthquakes": 34,
-    "alarms_raw_cells": 82,
-    "small_aftershocks_removed": 33858,
+    "false_alarm_earthquakes": 31,
+    "alarm_earthquakes": 35,
+    "alarms_raw_cells": 84,
+    "small_aftershocks_removed": 33901,
     "target_aftershocks_removed": 205
   },
   "rates": {
     "alarm_rate": 0.058823529411764705,
-    "truth_rate": 0.11764705882352941
+    "truth_rate": 0.11428571428571428
   },
   "hits": [
     {
@@ -988,6 +988,71 @@
     }
   ],
   "false_alarms": [
+    {
+      "profile_id": "off_ibaraki",
+      "profile_label": "茨城県沖",
+      "source": "Hirose et al. (2021)",
+      "parameters": {
+        "D_degrees": 0.5,
+        "Mf_min": 5.0,
+        "Tf_days": 3.0,
+        "Nf": 2,
+        "Ta_days": 1.0,
+        "target_M_min": 6.0
+      },
+      "center": null,
+      "bounds": {
+        "south": 36.0,
+        "north": 36.5,
+        "west": 141.25,
+        "east": 142.0
+      },
+      "triggered_at": "2026-11-09T13:52:53+09:00",
+      "expires_at": "2026-11-10T13:52:53+09:00",
+      "cell_bounds": [
+        {
+          "south": 36.0,
+          "north": 36.5,
+          "west": 141.25,
+          "east": 141.75
+        },
+        {
+          "south": 36.0,
+          "north": 36.5,
+          "west": 141.5,
+          "east": 142.0
+        }
+      ],
+      "cell_centers": [
+        {
+          "latitude": 36.25,
+          "longitude": 141.5
+        },
+        {
+          "latitude": 36.25,
+          "longitude": 141.75
+        }
+      ],
+      "raw_cell_count": 2,
+      "foreshocks": [
+        {
+          "datetime_jst": "2026-11-07T20:07:42.100000+09:00",
+          "latitude": 36.23,
+          "longitude": 141.548333,
+          "depth_km": 28.0,
+          "magnitude": 5.7,
+          "region": "茨城県沖"
+        },
+        {
+          "datetime_jst": "2026-11-09T13:52:53+09:00",
+          "latitude": 36.263333,
+          "longitude": 141.611667,
+          "depth_km": 28.0,
+          "magnitude": 5.8,
+          "region": "茨城県沖"
+        }
+      ]
+    },
     {
       "profile_id": "izu_islands",
       "profile_label": "伊豆諸島",

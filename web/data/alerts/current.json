@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-10T12:27:55.946284+09:00",
-  "as_of": "2026-11-10T12:27:41.797200+09:00",
-  "catalog_through": "2026-11-08T23:31:57.300000+09:00",
+  "generated_at": "2026-11-11T10:12:45.650959+09:00",
+  "as_of": "2026-11-11T10:12:36.916941+09:00",
+  "catalog_through": "2026-11-09T23:18:30.800000+09:00",
   "method": "Maeda (1996) nationwide + Hirose et al. (2021) regional parameters",
   "profiles": [
     {
@@ -112,7 +112,7 @@
     "distance": "log10(L_km) <= 0.5*Mpre - 1.8",
     "time": "log10(ta_days + 0.3) <= (0.17 + 0.85*(Mpre - 4.0))/1.3",
     "magnitude": "Ma < Mpre - 1.0",
-    "removed_recent_events": 226
+    "removed_recent_events": 255
   },
   "active_count": 0,
   "active_areas": []
