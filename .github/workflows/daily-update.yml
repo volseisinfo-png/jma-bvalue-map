@@ -2,31 +2,33 @@ name: Daily data update
 
 on:
   schedule:
-    # 21:05 UTC = 06:05 JST. Scheduled runs can start several minutes late.
+    # 21:05 UTC = 翌日 06:05 JST
     - cron: "5 21 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
   group: daily-update
   cancel-in-progress: false
 
 jobs:
-  update-and-deploy:
+  update-data:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
-      - uses: actions/checkout@v6
+      - name: Checkout current main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip
+
       - run: pip install -r requirements.txt
 
       - name: Restore fixed JMA catalogs
@@ -71,16 +73,16 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add data/catalog/provisional_*.csv web/data/recent web/data/alerts web/manifest.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Update JMA data and recent maps"
-            git push
+          if git diff --cached --quiet; then
+            echo "No data or figure changes to commit."
+            exit 0
           fi
 
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v4
-        with:
-          path: web
-      - name: Publish
-        id: deployment
-        uses: actions/deploy-pages@v4
+          git commit -m "Update JMA data and recent maps"
+
+          if ! git push origin HEAD:refs/heads/main; then
+            echo "::error::Push to main failed. If main advanced, start a fresh Daily data update run on main."
+            exit 1
+          fi
